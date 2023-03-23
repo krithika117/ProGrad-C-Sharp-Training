@@ -8,9 +8,9 @@ namespace day_3_hands_on
 {
     internal class ExceptionHandling
     {
-        static void Main(String[] args) {
-            ExceptionHandling.exception_handling();
-        }
+        //static void Main(String[] args) {
+        //    ExceptionHandling.exception_handling();
+        //}
         public static void exception_handling()
         {
             int a = 10;
