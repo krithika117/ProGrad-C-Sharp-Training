@@ -35,14 +35,40 @@ namespace day_3_hands_on
             foreach (var hashset in hashsetTest) { Console.Write(hashset + " "); }
 
             Console.WriteLine();
+            Console.WriteLine();
             Console.WriteLine("Sorted Set Demo");
 
             var sortedsetTest1 = new SortedSet<string>() { "a", "q", "k" };
             foreach (string s in sortedsetTest1) { Console.Write(s + " "); }
 
             Console.WriteLine();
+
             var sortedsetTest2 = new SortedSet<int>() { 4,5,6,1,2,0,-3,3 };
             foreach (int s in sortedsetTest2) { Console.Write(s + " "); }
+
+            Console.WriteLine();
+            Console.WriteLine();
+
+            Console.WriteLine("Stack Demo");
+            var stackSample = new Stack<string>();
+            stackSample.Push("A");
+            stackSample.Push("B");
+            stackSample.Push("Z");
+
+            foreach(var item in stackSample) 
+            { Console.WriteLine(item); }
+
+            Console.WriteLine();
+
+            Console.WriteLine("Queue Demo");
+            var queueDemo = new Queue<string>();
+            queueDemo.Enqueue("A");
+            queueDemo.Enqueue("B");
+            queueDemo.Enqueue("Z");
+
+            foreach (var item in queueDemo)
+            { Console.WriteLine(item); }
+
         }
     }
 }
