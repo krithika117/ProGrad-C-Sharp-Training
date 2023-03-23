@@ -8,7 +8,7 @@ namespace day_3_hands_on
 {
     internal class ProblemStatement
     {
-        public static void Main(string[] args)
+        /*public static void Main(string[] args)
         {
             int totalBullets = 14;
             int speedDifference = 3;
@@ -29,7 +29,7 @@ namespace day_3_hands_on
 
             Console.WriteLine("\nWinner is the " + ((heroRemainder > villainRemainder) ? "Hero" : "Villain"));
             
-        }
+        }*/
 
     }
 }
