@@ -170,7 +170,7 @@ public class MyClass {
 }
 MyClass.SayHello();
 ```
-## "this" keyword
+## `this` keyword
 ### To access instance variables
 ```
 class Person
