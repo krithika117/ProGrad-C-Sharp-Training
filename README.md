@@ -83,8 +83,7 @@ while (condition);
 
 ```
 ## Arrays
-3 Types of Arrays 
-- One dimensional 
+### One dimensional 
 ```
 int[] numbers = {1, 4, 2};
 
@@ -93,7 +92,7 @@ foreach (int i in numbers)
   Console.WriteLine(i);
 } 
 ```
-- Multi dimensional 
+### Multi dimensional 
 ```
 int[,] numbers = { {1, 4, 2}, {3, 6, 8} };
 
@@ -102,7 +101,7 @@ foreach (int i in numbers)
   Console.WriteLine(i);
 } 
 ```
-- Jagged (Array of Arrays)
+### Jagged (Array of Arrays)
 
 ```
 int[][] jagged_array = { new int[]{ 2, 3, 4 }, new int[]{ 4, 5, 6 } };
