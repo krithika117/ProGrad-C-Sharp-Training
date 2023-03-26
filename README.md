@@ -184,7 +184,7 @@ class GenericMethod<T>
 }
 ```
 ## Collections
-## Lists
+### Lists
 ```
 List<string> myList = new List<string>();
 myList.Add("apple");
