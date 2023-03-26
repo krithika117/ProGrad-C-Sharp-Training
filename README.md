@@ -27,7 +27,7 @@
   * [Queue](#queue)
   * [Linked List](#linked-list)
   * [Sorted Set](#sorted-set)
-  * [Sorted-Dictionary](#sorted-dictionary)
+  * [Sorted Dictionary](#sorted-dictionary)
 
 ## Basic C# Syntax
 ```
