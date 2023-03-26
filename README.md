@@ -127,20 +127,93 @@ finally
     // code that will be executed whether or not an exception is thrown
 }
 ```
-## Constructors
+## Constructors & Destructors
 ```
 class MyClass
 {
-    // default constructor
+    // constructor
     public MyClass()
     {
-        // code to initialize class members
+        Console.WriteLine("Object created.");
     }
 
-    // parameterized constructor
-    public MyClass(int param1, string param2)
+    // destructor
+    ~MyClass()
     {
-        // code to initialize class members with the given parameters
+        Console.WriteLine("Object destroyed.");
     }
 }
+
+// create an object of the class
+MyClass obj = new MyClass();
+
+// output: Object created.
+
+// destroy the object
+obj = null;
+
+// output: Object destroyed.
+
+```
+## Generics
+```
+class MyClass<T>
+{
+    public T Value { get; set; }
+
+    public void Display()
+    {
+        Console.WriteLine("Value: " + Value);
+    }
+}
+
+// create an object of the class with a string type parameter
+MyClass<string> obj1 = new MyClass<string>();
+obj1.Value = "Hello";
+obj1.Display();
+
+// output: Value: Hello
+
+// create an object of the class with an int type parameter
+MyClass<int> obj2 = new MyClass<int>();
+obj2.Value = 123;
+obj2.Display();
+
+// output: Value: 123
+
+```
+## Collections
+## Lists
+```
+List<string> myList = new List<string>();
+myList.Add("apple");
+myList.Add("banana");
+myList.Add("orange");
+
+foreach (string item in myList)
+{
+    Console.WriteLine(item);
+}
+
+// output:
+// apple
+// banana
+// orange
+```
+### Dictionary
+```
+Dictionary<string, int> myDictionary = new Dictionary<string, int>();
+myDictionary.Add("apple", 3);
+myDictionary.Add("banana", 6);
+myDictionary.Add("orange", 2);
+
+foreach (KeyValuePair<string, int> item in myDictionary)
+{
+    Console.WriteLine(item.Key + ": " + item.Value);
+}
+
+// output:
+// apple: 3
+// banana: 6
+// orange: 2
 ```
