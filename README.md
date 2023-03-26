@@ -24,6 +24,10 @@
   * [Dictionary](#dictionary)
   * [Hash sets](#hash-sets)
   * [Stack](#stack)
+  * [Queue](#queue)
+  * [Linked List](#linked-list)
+  * [Sorted Set](#sorted-set)
+  * [Sorted-Dictionary](#sorted-dictionary)
 
 ## Basic C# Syntax
 ```
