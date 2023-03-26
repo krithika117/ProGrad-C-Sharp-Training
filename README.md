@@ -324,3 +324,37 @@ foreach (var item in linkedListDemo) {
     Console.WriteLine(item); 
 }
 ```
+### Sorted Set
+```
+// Create a new sorted set of integers
+SortedSet<int> sortedSet = new SortedSet<int>();
+
+// Add some elements to the set
+sortedSet.Add(4);
+sortedSet.Add(1);
+sortedSet.Add(3);
+sortedSet.Add(2);
+
+// Iterate over the elements in the set
+foreach (int num in sortedSet)
+{
+    System.Console.WriteLine(num);
+}
+```
+### Sorted Dictionary
+```
+// Create a new sorted dictionary of strings and integers
+SortedDictionary<string, int> sortedDictionary = new SortedDictionary<string, int>();
+
+// Add some key-value pairs to the dictionary
+sortedDictionary.Add("one", 1);
+sortedDictionary.Add("two", 2);
+sortedDictionary.Add("three", 3);
+sortedDictionary.Add("four", 4);
+
+// Iterate over the key-value pairs in the dictionary
+foreach (KeyValuePair<string, int> kvp in sortedDictionary)
+{
+    System.Console.WriteLine(kvp.Key + ": " + kvp.Value);
+}
+```
