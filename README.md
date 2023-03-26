@@ -153,7 +153,6 @@ MyClass obj = new MyClass();
 obj = null;
 
 // output: Object destroyed.
-
 ```
 ## Generics
 ```
