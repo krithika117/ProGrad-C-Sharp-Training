@@ -12,7 +12,7 @@
 - [Arrays](#arrays)
   * [One dimensional](#one-dimensional)
   * [Multi dimensional](#multi-dimensional)
-  * [Jagged](#jagged)
+  * [Jagged](#jagged-array-of-arrays)
 - [Enumeration](#enumeration)
 - [Exceptions](#exceptions)
 - [Constructors & Destructors](#constructors--destructors)
