@@ -128,31 +128,55 @@ finally
 }
 ```
 ## Constructors & Destructors
+### Constructors
 ```
-class MyClass
+public class Person
 {
-    // constructor
-    public MyClass()
+    public string Name;
+    public int Age;
+
+    // Default constructor
+    public Person()
     {
-        Console.WriteLine("Object created.");
+        Name = "John Doe";
+        Age = 0;
     }
 
-    // destructor
-    ~MyClass()
+    // Parameterized constructor
+    public Person(string name, int age)
     {
-        Console.WriteLine("Object destroyed.");
+        Name = name;
+        Age = age;
     }
 }
 
-// create an object of the class
+// Create a person object using the default constructor
+Person person1 = new Person();
+
+// Create a person object using the parameterized constructor
+Person person2 = new Person("Jane Smith", 30);
+```
+### Destructors
+```
+public class MyClass
+{
+    public MyClass()
+    {
+        System.Console.WriteLine("Constructor called");
+    }
+
+    ~MyClass()
+    {
+        System.Console.WriteLine("Destructor called");
+    }
+}
+
+// Create a new object of MyClass
 MyClass obj = new MyClass();
 
-// output: Object created.
-
-// destroy the object
+// Dispose of the object
 obj = null;
-
-// output: Object destroyed.
+System.GC.Collect();
 ```
 ## Generics
 ```
