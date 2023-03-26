@@ -157,30 +157,31 @@ obj = null;
 ```
 ## Generics
 ```
-class MyClass<T>
-{
-    public T Value { get; set; }
+using System;
 
-    public void Display()
+class Program
+{
+    static void Main(string[] args)
     {
-        Console.WriteLine("Value: " + Value);
+        // create a generic method object with an int parameter
+        GenericMethod<int> obj1 = new GenericMethod<int>();
+        obj1.Print(123);
+
+        // create a generic method object with a string parameter
+        GenericMethod<string> obj2 = new GenericMethod<string>();
+        obj2.Print("Hello");
+
+        Console.ReadLine();
     }
 }
 
-// create an object of the class with a string type parameter
-MyClass<string> obj1 = new MyClass<string>();
-obj1.Value = "Hello";
-obj1.Display();
-
-// output: Value: Hello
-
-// create an object of the class with an int type parameter
-MyClass<int> obj2 = new MyClass<int>();
-obj2.Value = 123;
-obj2.Display();
-
-// output: Value: 123
-
+class GenericMethod<T>
+{
+    public void Print(T value)
+    {
+        Console.WriteLine(value);
+    }
+}
 ```
 ## Collections
 ## Lists
