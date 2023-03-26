@@ -15,6 +15,7 @@
   * [Jagged](#jagged-array-of-arrays)
 - [Enumeration](#enumeration)
 - [Exceptions](#exceptions)
+- [Static](#static)
 - [Constructors & Destructors](#constructors--destructors)
   * [Constructors](#constructors)
   * [Destructors](#destructors)
@@ -153,6 +154,68 @@ catch (Exception ex)
 finally
 {
     // code that will be executed whether or not an exception is thrown
+}
+```
+## Static
+Declare elements that belong to the class itself, rather than to an instance of the class.
+```
+public class MyClass {
+   public static void SayHello() {
+      Console.WriteLine("Hello, world!");
+   }
+}
+MyClass.SayHello();
+```
+## this keyword
+### To access instance variables
+```
+class Person
+{
+    private string name;
+ 
+    public void SetName(string name)
+    {
+        this.name = name; // using 'this' to access instance variable
+    }
+}
+```
+### To call another constructor of the same class
+```
+class Person
+{
+    private string name;
+ 
+    public Person()
+    {
+        // calling another constructor of the same class
+        this("John Doe"); 
+    }
+ 
+    public Person(string name)
+    {
+        this.name = name;
+    }
+}
+```
+### To pass the current object as a parameter
+```
+class Person
+{
+    private string name;
+ 
+    public void PrintName()
+    {
+        // passing the current object as a parameter
+        Helper.Print(this);
+    }
+}
+ 
+class Helper
+{
+    public static void Print(Person person)
+    {
+        Console.WriteLine(person.name);
+    }
 }
 ```
 ## Constructors & Destructors
