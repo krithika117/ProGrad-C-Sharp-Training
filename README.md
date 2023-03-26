@@ -217,3 +217,61 @@ foreach (KeyValuePair<string, int> item in myDictionary)
 // banana: 6
 // orange: 2
 ```
+### Hash sets
+```
+HashSet<string> set = new HashSet<string>();
+
+// Add elements to the set
+set.Add("Alice");
+set.Add("Bob");
+set.Add("Charlie");
+
+// Check if an element is in the set
+Console.WriteLine(set.Contains("Alice")); // Output: True
+Console.WriteLine(set.Contains("Dave")); // Output: False
+
+// Remove elements from the set
+set.Remove("Bob");
+
+// Iterate over the elements in the set
+foreach (string name in set)
+{
+    Console.WriteLine(name);
+}
+```
+### Stack
+```
+Stack<string> stack = new Stack<string>();
+
+// Push elements onto the stack
+stack.Push("Alice");
+stack.Push("Bob");
+stack.Push("Charlie");
+
+// Pop elements off the stack
+Console.WriteLine(stack.Pop()); // Output: Charlie
+Console.WriteLine(stack.Pop()); // Output: Bob
+
+// Peek at the top element of the stack
+Console.WriteLine(stack.Peek()); // Output: Alice
+```
+### Queue
+```
+Queue<string> queue = new Queue<string>();
+
+// Enqueue elements into the queue
+queue.Enqueue("Alice");
+queue.Enqueue("Bob");
+queue.Enqueue("Charlie");
+
+// Dequeue elements from the queue
+Console.WriteLine(queue.Dequeue()); // Output: Alice
+Console.WriteLine(queue.Dequeue()); // Output: Bob
+
+// Peek at the front element of the queue
+Console.WriteLine(queue.Peek()); // Output: Charlie
+```
+### Linked List
+```
+
+```
