@@ -1,5 +1,30 @@
 # ProGrad C# Training
 
+## Table of Contents
+
+- [Basic C# Syntax](#basic-c-syntax)
+- [Conditional Statements](#conditional-statements)
+  * [if-else](#if-else)
+- [Loops](#loops)
+  * [For loop](#for-loop)
+  * [While Loop](#while-loop)
+  * [Do while Loop](#do-while-loop)
+- [Arrays](#arrays)
+  * [One dimensional](#one-dimensional)
+  * [Multi dimensional](#multi-dimensional)
+  * [Jagged](#jagged-array)
+- [Enumeration](#enumeration)
+- [Exceptions](#exceptions)
+- [Constructors & Destructors](#constructors--destructors)
+  * [Constructors](#constructors)
+  * [Destructors](#destructors)
+- [Generics](#generics)
+- [Collections](#collections)
+  * [Lists](#lists)
+  * [Dictionary](#dictionary)
+  * [Hash sets](#hash-sets)
+  * [Stack](#stack)
+
 ## Basic C# Syntax
 ```
 using System;
