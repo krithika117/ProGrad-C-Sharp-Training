@@ -273,5 +273,30 @@ Console.WriteLine(queue.Peek()); // Output: Charlie
 ```
 ### Linked List
 ```
+var linkedListDemo = new LinkedList<int>();
+linkedListDemo.AddLast(1);
+linkedListDemo.AddLast(2);  
+linkedListDemo.AddLast(3);
+linkedListDemo.AddLast(3);
+linkedListDemo.AddLast(3);
+linkedListDemo.AddLast(4);
+linkedListDemo.AddLast(5);
+foreach (var item in linkedListDemo) { Console.WriteLine(item); }
+Console.WriteLine();
+linkedListDemo.AddFirst(0);
+foreach (var item in linkedListDemo) { Console.WriteLine(item); }
+Console.WriteLine();
+linkedListDemo.RemoveFirst();
+linkedListDemo.RemoveLast();
+foreach (var item in linkedListDemo) { Console.WriteLine(item); }
+Console.WriteLine();
+LinkedListNode<int> node = linkedListDemo.Find(3);
 
+foreach (var item in linkedListDemo) {
+    if (item == 3)
+    {
+        linkedListDemo.AddBefore(node, -1);
+    }
+    Console.WriteLine(item); 
+}
 ```
