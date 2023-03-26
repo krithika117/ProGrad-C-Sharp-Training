@@ -15,7 +15,7 @@
   * [Jagged](#jagged-array-of-arrays)
 - [Enumeration](#enumeration)
 - [Exceptions](#exceptions)
-- [Static](#static)
+- [Static Keyword](#static-keyword)
 - ["this" Keyword](#this-keyword)
   * [To access instance variables](#to-access-instance-variables)
   * [To call another constructor of the same class](#to-call-another-constructor-of-the-same-class)
@@ -160,7 +160,7 @@ finally
     // code that will be executed whether or not an exception is thrown
 }
 ```
-## Static
+## `static` keyword
 Declare elements that belong to the class itself, rather than to an instance of the class.
 ```
 public class MyClass {
