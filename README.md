@@ -1,6 +1,6 @@
 # ProGrad C# Training
 
-### Basic C# Syntax
+## Basic C# Syntax
 ```
 using System;
 
@@ -16,7 +16,48 @@ namespace HelloWorld
 }
 
 ```
-### Arrays
+## Conditional Statements
+### if-else
+```
+if (condition)
+{
+    // code to execute if the condition is true
+}
+else if (condition2)
+{
+    // code to execute if condition2 is true
+}
+else
+{
+    // code to execute if both conditions are false
+}
+```
+## Loops
+### For loop
+```
+for (int i = 0; i < length; i++)
+{
+    // code to execute for each iteration of the loop
+}
+```
+### While Loop
+```
+while (condition)
+{
+    // code to execute while the condition is true
+}
+
+```
+### Do while Loop
+```
+do
+{
+    // code to execute at least once, and then repeatedly while the condition is true
+}
+while (condition);
+
+```
+## Arrays
 3 Types of Arrays 
 - One dimensional 
 ```
@@ -47,7 +88,7 @@ foreach (int[] arr in jagged_array)
      Console.WriteLine();
 }
 ```
-### Enumeration
+## Enumeration
 ```
 public enum Months
 {
@@ -68,6 +109,38 @@ static void Main(string[] args)
 {
     foreach (Months d in Enum.GetValues(typeof(Months))) { 
     Console.WriteLine(d);
+    }
+}
+```
+## Exceptions
+```
+try
+{
+    // code that may throw an exception
+}
+catch (Exception ex)
+{
+    // handle the exception
+}
+finally
+{
+    // code that will be executed whether or not an exception is thrown
+}
+```
+## Constructors
+```
+class MyClass
+{
+    // default constructor
+    public MyClass()
+    {
+        // code to initialize class members
+    }
+
+    // parameterized constructor
+    public MyClass(int param1, string param2)
+    {
+        // code to initialize class members with the given parameters
     }
 }
 ```
