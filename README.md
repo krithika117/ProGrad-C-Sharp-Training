@@ -649,8 +649,6 @@ class Program
 ## `sealed` keyword
 Sealed entities cannot be inherited.
 ```
-// C# code to show restrictions
-// of a Sealed Class
 using System;
 
 class Bird {
