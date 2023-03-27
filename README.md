@@ -1,7 +1,7 @@
 # ProGrad C# Training
 
 ## Table of Contents
-
+[Fundamentals](#fundamentals)
 - [Basic C# Syntax](#basic-c-syntax)
 - [Conditional Statements](#conditional-statements)
   * [if-else](#if-else)
@@ -34,12 +34,13 @@
   * [Sorted Set](#sorted-set)
   * [Sorted Dictionary](#sorted-dictionary)
   * [Sorted List](#sorted-list)
-- [OOPS Concepts](#oops-concepts)
+[OOPS Concepts](#oops-concepts)
 - [Access Specifiers](#access-specifiers)
 - [Method Overloading](#method-overloading)
 - [`sealed` keyword](#sealed-keyword)
+[File Handling](#file-handling)
 
-
+# Fundamentals
 ## Basic C# Syntax
 ```
 using System;
