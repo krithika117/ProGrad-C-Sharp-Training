@@ -9,7 +9,7 @@
   * [For loop](#for-loop)
   * [While Loop](#while-loop)
   * [Do while Loop](#do-while-loop)
-- [String Manipulation](#strings-manipulation)
+- [String Manipulation](#string-manipulation)
 - [Arrays](#arrays)
   * [One dimensional](#one-dimensional)
   * [Multi dimensional](#multi-dimensional)
