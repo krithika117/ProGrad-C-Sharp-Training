@@ -37,6 +37,7 @@
 - [OOPS Concepts](#oops-concepts)
 - [Access Specifiers](#access-specifiers)
 - [Method Overloading](#method-overloading)
+- [`sealed` keyword](#sealed-keyword)
 
 
 ## Basic C# Syntax
@@ -528,10 +529,11 @@ class Example : Test {
 // Driver Class
 class Program {
 
-	// Main Method
-	static void Main()
-	{
-	}
+// Main Method
+  static void Main()
+  {
+  
+  }
 }
 // Output
 // Error CS0509 ‘Example’ : cannot derive from sealed type ‘Test’
