@@ -36,6 +36,7 @@
   * [Sorted List](#sorted-list)
 - [OOPS Concepts](#oops-concepts)
 - [Access Specifiers](#access-specifiers)
+- [Method Overloading](#method-overloading)
 
 
 ## Basic C# Syntax
@@ -483,3 +484,26 @@ foreach (KeyValuePair<string, int> kvp in sortedList)
 | Non-Derived class (Same assembly)| Yes    | Yes                | No       | Yes      | No                | No      |
 | Derived class (Different assembly)| Yes    | Yes                 | Yes        | No       | No                | No      |
 | Non-Derived class (Different assembly)| Yes    | No                 | No        | No       | No                | No      |
+
+## Method Overloading
+```
+class Program 
+    {
+        
+        private static void Method1() {
+            Console.WriteLine("No Parameters");
+        }
+        private static void Method1(string s) {
+            Console.WriteLine("1 Parameter = " + s);
+        }
+        static void Main(string[] args)
+        {
+            //Program p = new Program();
+            Method1();
+            Method1("krithika");
+        }
+    }
+ // Output
+ // No Parameters
+ // 1 Parameter = Krithika
+```
