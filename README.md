@@ -713,8 +713,7 @@ public class Dog : Animal
 |--------------------------------------------------|--------------------------------------------------|
 | Can have method body                             | Cannot have method body                          |
 | Can be overridden in derived classes             | Must be implemented by derived classes           |
-| Must have a default implementation in the base   | No implementation in the base class              |
-| class                                            |                                                  |
+| Must have a default implementation in the base class  | No implementation in the base class              |
 | Use `virtual` keyword to declare                 | Use `abstract` keyword to declare                 |
 
 ## `sealed` keyword
