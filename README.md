@@ -670,7 +670,6 @@ class Program
         myCat.Play();
     }
 }
-
 ```
 ## `sealed` keyword
 Sealed entities cannot be inherited.
