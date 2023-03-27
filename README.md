@@ -488,21 +488,20 @@ foreach (KeyValuePair<string, int> kvp in sortedList)
 ## Method Overloading
 ```
 class Program 
-    {
-        
-        private static void Method1() {
-            Console.WriteLine("No Parameters");
-        }
-        private static void Method1(string s) {
-            Console.WriteLine("1 Parameter = " + s);
-        }
-        static void Main(string[] args)
-        {
-            //Program p = new Program();
-            Method1();
-            Method1("krithika");
-        }
+{
+    private static void Method1() {
+        Console.WriteLine("No Parameters");
     }
+    private static void Method1(string s) {
+        Console.WriteLine("1 Parameter = " + s);
+    }
+    static void Main(string[] args)
+    {
+        //Program p = new Program();
+        Method1();
+        Method1("krithika");
+    }
+}
  // Output
  // No Parameters
  // 1 Parameter = Krithika
