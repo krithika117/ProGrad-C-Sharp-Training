@@ -573,7 +573,7 @@ myDog.Run();
 myDog.Bark();
 ```
 ### Hierarchical Inheritance
-````
+```
 public class Animal
 {
     public void Eat()
@@ -605,9 +605,7 @@ myDog.Bark();
 Cat myCat = new Cat();
 myCat.Eat();
 myCat.Meow();
-
 ```
-
 ## `sealed` keyword
 Sealed entities cannot be inherited.
 ```
