@@ -42,6 +42,7 @@
   * [Single Inheritance](#single-inheritance)
   * [Multi-level Inheritance](#multi-level-inheritance)
   * [Hierarchical Inheritance](#hierarchical-inheritance)
+- [Interfaces](#interfaces)
 - [`sealed` keyword](#sealed-keyword)
 
 ### [File Handling](#file-handling-1)
@@ -605,6 +606,45 @@ myDog.Bark();
 Cat myCat = new Cat();
 myCat.Eat();
 myCat.Meow();
+```
+## Interfaces
+Interfaces can be used to establish Multiple inheritance without the need for classes.
+```
+using System;
+
+interface IAnimal
+{
+    void Move();
+}
+
+interface IPet
+{
+    void Play();
+}
+
+class Cat : IAnimal, IPet
+{
+    public void Move()
+    {
+        Console.WriteLine("Cat is walking");
+    }
+
+    public void Play()
+    {
+        Console.WriteLine("Cat is playing");
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Cat myCat = new Cat();
+        myCat.Move();
+        myCat.Play();
+    }
+}
+
 ```
 ## `sealed` keyword
 Sealed entities cannot be inherited.
