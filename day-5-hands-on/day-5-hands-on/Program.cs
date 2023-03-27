@@ -1,10 +1,12 @@
 ﻿namespace day_5_hands_on
 {
-    internal class Program
+    class Program : Demo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            var obj = new Program();
+            obj.display("Hello World");
+            Console.WriteLine(obj.name);
         }
     }
 }
