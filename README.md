@@ -44,6 +44,7 @@
   * [Multi-level Inheritance](#multi-level-inheritance)
   * [Hierarchical Inheritance](#hierarchical-inheritance)
 - [Interfaces](#interfaces)
+- [`abstract` keyword](#abstract-keyword)
 - [`sealed` keyword](#sealed-keyword)
 
 ### [File Handling](#file-handling-1)
@@ -667,6 +668,25 @@ class Program
         myCat.Play();
     }
 }
+```
+## `abstract` keyword
+```
+public abstract class Animal
+{
+    public abstract void Speak(); // abstract method
+}
+
+public class Dog : Animal
+{
+    public override void Speak() // implement the abstract method in derived class
+    {
+        Console.WriteLine("Bark!");
+    }
+}
+```
+```
+Animal a = new Dog();
+a.Speak(); // output: Bark!
 ```
 ## `sealed` keyword
 Sealed entities cannot be inherited.
