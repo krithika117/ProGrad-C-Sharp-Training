@@ -506,3 +506,33 @@ class Program
 // No Parameters
 // 1 Parameter = Krithika
 ```
+## `sealed` keyword
+Sealed entities cannot be inherited.
+```
+// C# code to show restrictions
+// of a Sealed Class
+using System;
+
+class Bird {
+
+}
+
+// Creating a sealed class
+sealed class Test : Bird {
+}
+
+// Inheriting the Sealed Class
+class Example : Test {
+}
+
+// Driver Class
+class Program {
+
+	// Main Method
+	static void Main()
+	{
+	}
+}
+// Output
+// Error CS0509 ‘Example’ : cannot derive from sealed type ‘Test’
+```
