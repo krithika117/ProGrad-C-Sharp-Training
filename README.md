@@ -34,6 +34,9 @@
   * [Sorted Set](#sorted-set)
   * [Sorted Dictionary](#sorted-dictionary)
   * [Sorted List](#sorted-list)
+  - [OOPS Concepts](#oops-concepts)
+  - [Access Specifiers](#access-specifiers)
+
 
 ## Basic C# Syntax
 ```
