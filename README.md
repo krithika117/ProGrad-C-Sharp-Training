@@ -67,7 +67,6 @@ namespace HelloWorld
     }
   }
 }
-
 ```
 ## Conditional Statements
 ### if-else
@@ -99,7 +98,6 @@ while (condition)
 {
     // code to execute while the condition is true
 }
-
 ```
 ### Do while Loop
 ```
@@ -108,7 +106,6 @@ do
     // code to execute at least once, and then repeatedly while the condition is true
 }
 while (condition);
-
 ```
 ## Arrays
 ### One dimensional 
