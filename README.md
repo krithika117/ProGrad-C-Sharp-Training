@@ -471,3 +471,11 @@ foreach (KeyValuePair<string, int> kvp in sortedList)
     Console.WriteLine("Key = {0}, Value = {1}", kvp.Key, kvp.Value);
 }
 ```
+### Access Specifiers
+| Caller location         | Public | Protected Internal | Protected | Internal | Private Protected | Private |
+| ---------------------------- | ------ | ------------------ | --------- | -------- | ----------------- | ------- |
+| Within the class            | Yes    | Yes                | Yes       | Yes      | Yes               | Yes     |
+| Derived class (Same assembly)| Yes    | Yes                | Yes       | Yes      | Yes               | No      |
+| Non-Derived class (Same assembly)| Yes    | Yes                | No       | Yes      | No                | No      |
+| Derived class (Different assembly)| Yes    | Yes                 | Yes        | No       | No                | No      |
+| Non-Derived class (Different assembly)| Yes    | No                 | No        | No       | No                | No      |
