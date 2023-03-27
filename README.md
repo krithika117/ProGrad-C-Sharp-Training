@@ -537,7 +537,6 @@ class Dog : Animal
         Console.WriteLine("The dog barks");
     }
 }
-
 ```
 ```
 Animal animal = new Animal();
@@ -545,7 +544,6 @@ animal.MakeSound(); // writes "The animal makes a sound" to the console
 
 Dog dog = new Dog();
 dog.MakeSound(); // writes "The dog barks" to the console
-
 ```
 ## Inheritance
 ### Single Inheritance
