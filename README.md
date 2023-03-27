@@ -38,6 +38,7 @@
 ### [OOPS Concepts](#oops-concepts-1)
 - [Access Specifiers](#access-specifiers)
 - [Method Overloading](#method-overloading)
+- [Method Overriding](#method-overriding)
 - [Inheritance](#inheritance)
   * [Single Inheritance](#single-inheritance)
   * [Multi-level Inheritance](#multi-level-inheritance)
@@ -518,6 +519,33 @@ class Program
 // Output
 // No Parameters
 // 1 Parameter = Krithika
+```
+## Method Overriding
+```
+class Animal
+{
+    public virtual void MakeSound()
+    {
+        Console.WriteLine("The animal makes a sound");
+    }
+}
+
+class Dog : Animal
+{
+    public override void MakeSound()
+    {
+        Console.WriteLine("The dog barks");
+    }
+}
+
+```
+```
+Animal animal = new Animal();
+animal.MakeSound(); // writes "The animal makes a sound" to the console
+
+Dog dog = new Dog();
+dog.MakeSound(); // writes "The dog barks" to the console
+
 ```
 ## Inheritance
 ### Single Inheritance
