@@ -35,12 +35,12 @@
   * [Sorted Dictionary](#sorted-dictionary)
   * [Sorted List](#sorted-list)
   
-### [OOPS Concepts](#oops-concepts)
+### [OOPS Concepts](#oops-concepts-1)
 - [Access Specifiers](#access-specifiers)
 - [Method Overloading](#method-overloading)
 - [`sealed` keyword](#sealed-keyword)
 
-### [File Handling](#file-handling)
+### [File Handling](#file-handling-1)
 - [Using File](#using-file)
 - [Using FileWriter](#using-filewriter)
 - [Using StreamWriter and StreamReader](#using-streamwriter-and-streamreader)
