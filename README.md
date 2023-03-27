@@ -474,7 +474,7 @@ foreach (KeyValuePair<string, int> kvp in sortedList)
     Console.WriteLine("Key = {0}, Value = {1}", kvp.Key, kvp.Value);
 }
 ```
-## OOPS Concepts
+# OOPS Concepts
 ## Access Specifiers
 | Caller location         | Public | Protected Internal | Protected | Internal | Private Protected | Private |
 | ---------------------------- | ------ | ------------------ | --------- | -------- | ----------------- | ------- |
