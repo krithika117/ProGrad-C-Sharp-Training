@@ -38,6 +38,10 @@
 ### [OOPS Concepts](#oops-concepts-1)
 - [Access Specifiers](#access-specifiers)
 - [Method Overloading](#method-overloading)
+- [Inheritance](#inheritance)
+  * [Single Inheritance](#single-inheritance)
+  * [Multi-level Inheritance](#multi-level-inheritance)
+  * [Hierarchical Inheritance](#hierarchical-inheritance)
 - [`sealed` keyword](#sealed-keyword)
 
 ### [File Handling](#file-handling-1)
@@ -514,6 +518,96 @@ class Program
 // No Parameters
 // 1 Parameter = Krithika
 ```
+## Inheritance
+### Single Inheritance
+```
+public class Animal
+{
+    public void Eat()
+    {
+        Console.WriteLine("Eating...");
+    }
+}
+
+public class Dog : Animal
+{
+    public void Bark()
+    {
+        Console.WriteLine("Barking...");
+    }
+}
+
+Dog myDog = new Dog();
+myDog.Eat();
+myDog.Bark();
+```
+### Multi-level Inheritance
+```
+public class Animal
+{
+    public void Eat()
+    {
+        Console.WriteLine("Eating...");
+    }
+}
+
+public class Mammal : Animal
+{
+    public void Run()
+    {
+        Console.WriteLine("Running...");
+    }
+}
+
+public class Dog : Mammal
+{
+    public void Bark()
+    {
+        Console.WriteLine("Barking...");
+    }
+}
+
+Dog myDog = new Dog();
+myDog.Eat();
+myDog.Run();
+myDog.Bark();
+```
+### Hierarchical Inheritance
+````
+public class Animal
+{
+    public void Eat()
+    {
+        Console.WriteLine("Eating...");
+    }
+}
+
+public class Dog : Animal
+{
+    public void Bark()
+    {
+        Console.WriteLine("Barking...");
+    }
+}
+
+public class Cat : Animal
+{
+    public void Meow()
+    {
+        Console.WriteLine("Meowing...");
+    }
+}
+
+Dog myDog = new Dog();
+myDog.Eat();
+myDog.Bark();
+
+Cat myCat = new Cat();
+myCat.Eat();
+myCat.Meow();
+
+```
+
 ## `sealed` keyword
 Sealed entities cannot be inherited.
 ```
