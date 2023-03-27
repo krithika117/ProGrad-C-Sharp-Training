@@ -1,7 +1,7 @@
 # ProGrad C# Training
 
 ## Table of Contents
-### [Fundamentals](#fundamentals)
+### [Fundamentals](#fundamentals-1)
 - [Basic C# Syntax](#basic-c-syntax)
 - [Conditional Statements](#conditional-statements)
   * [if-else](#if-else)
