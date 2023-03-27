@@ -33,6 +33,7 @@
   * [Linked List](#linked-list)
   * [Sorted Set](#sorted-set)
   * [Sorted Dictionary](#sorted-dictionary)
+  * [Sorted List](#sorted-list)
 
 ## Basic C# Syntax
 ```
@@ -451,5 +452,22 @@ sortedDictionary.Add("four", 4);
 foreach (KeyValuePair<string, int> kvp in sortedDictionary)
 {
     System.Console.WriteLine(kvp.Key + ": " + kvp.Value);
+}
+```
+### Sorted List
+```
+// create a new sorted list
+SortedList<string, int> sortedList = new SortedList<string, int>();
+
+// add elements to the sorted list
+sortedList.Add("apple", 3);
+sortedList.Add("banana", 2);
+sortedList.Add("orange", 4);
+sortedList.Add("grape", 1);
+
+// iterate through the sorted list
+foreach (KeyValuePair<string, int> kvp in sortedList)
+{
+    Console.WriteLine("Key = {0}, Value = {1}", kvp.Key, kvp.Value);
 }
 ```
