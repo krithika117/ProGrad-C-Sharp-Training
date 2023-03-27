@@ -45,6 +45,8 @@
   * [Hierarchical Inheritance](#hierarchical-inheritance)
 - [Interfaces](#interfaces)
 - [`abstract` keyword](#abstract-keyword)
+- [`virtual` keyword](#virtual-keyword)
+- [`abstract` vs `virtual`](#abstract-vs-virtual)
 - [`sealed` keyword](#sealed-keyword)
 
 ### [File Handling](#file-handling-1)
@@ -688,6 +690,33 @@ public class Dog : Animal
 Animal a = new Dog();
 a.Speak(); // output: Bark!
 ```
+## `virtual` keyword
+```
+public class Animal
+{
+    public virtual void MakeSound()
+    {
+        Console.WriteLine("The animal makes a sound.");
+    }
+}
+
+public class Dog : Animal
+{
+    public override void MakeSound()
+    {
+        Console.WriteLine("The dog barks.");
+    }
+}
+```
+## `abstract` vs `virtual`
+| Virtual                                          | Abstract                                         |
+|--------------------------------------------------|--------------------------------------------------|
+| Can have method body                             | Cannot have method body                          |
+| Can be overridden in derived classes             | Must be implemented by derived classes           |
+| Must have a default implementation in the base   | No implementation in the base class              |
+| class                                            |                                                  |
+| Use `virtual` keyword to declare                 | Use `abstract` keyword to declare                 |
+
 ## `sealed` keyword
 Sealed entities cannot be inherited.
 ```
