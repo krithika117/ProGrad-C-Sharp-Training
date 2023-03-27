@@ -122,7 +122,64 @@ namespace day_5_hands_on
         }
         public static void Main(String[] args) { 
             Question2 obj = new Question2();
-            // Test methods
+                        
+            Console.WriteLine("Initial chocolates:");
+            obj.displayChocolates();
+
+            // Trial 1
+            Console.WriteLine("\nTrial 1: Add chocolates");
+            obj.addChocolates("green", 5);
+            obj.displayChocolates();
+
+            // Trial 2
+            Console.WriteLine("\nTrial 2: Remove chocolates");
+            obj.removeChocolates(6);
+            obj.displayChocolates();
+
+            // Trial 3
+            Console.WriteLine("\nTrial 3: Dispense chocolates");
+            obj.dispensedChocolates(4);
+            obj.displayChocolates();
+
+            // Trial 4
+            Console.WriteLine("\nTrial 4: Dispense chocolates of a color");
+            obj.dispenseChocolateOfColor("red", 2);
+            obj.displayChocolates();
+
+            // Trial 5
+            Console.WriteLine("\nTrial 5: Get number of chocolates");
+            obj.noOfChocolates();
+
+            // Trial 6
+            Console.WriteLine("\nTrial 6: Sort chocolates");
+            var sortedChocolates = obj.chocolateSort();
+            foreach (var chocolate in sortedChocolates)
+            {
+                Console.WriteLine(chocolate.Key + ": " + chocolate.Value);
+            }
+
+            // Trial 7
+            Console.WriteLine("\nTrial 7: Change chocolate color");
+            obj.changeChocolateColor("green", "blue", 3);
+            obj.displayChocolates();
+
+            // Trial 8
+            Console.WriteLine("\nTrial 8: Change all chocolates of a color to another color");
+            int newCount = obj.changeChocolateColorAllOfxCount("red", "pink", 0);
+            Console.WriteLine("New count of pink chocolates: " + newCount);
+            obj.displayChocolates();
+
+            // Challenge 1
+            Console.WriteLine("\nChallenge 1: Remove chocolate of a color");
+            obj.removeChocolateOfColor("green");
+            obj.displayChocolates();
+
+            // Challenge 2
+            Console.WriteLine("\nChallenge 2: Dispense rainbow chocolates");
+            int numRainbowChocolates = obj.dispenseRainbowChocolates(10);
+            Console.WriteLine("Number of rainbow chocolates dispensed: " + numRainbowChocolates);
+            obj.displayChocolates();
+
         }
     }
 }
