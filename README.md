@@ -502,7 +502,7 @@ class Program
         Method1("krithika");
     }
 }
- // Output
- // No Parameters
- // 1 Parameter = Krithika
+// Output
+// No Parameters
+// 1 Parameter = Krithika
 ```
