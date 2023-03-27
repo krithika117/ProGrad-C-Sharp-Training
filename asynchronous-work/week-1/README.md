@@ -50,6 +50,7 @@ public class MyEnumerable : IEnumerable
 }
 ```
 <hr>
+
 ### 2. What is Constructor Chaining in C#?
 Constructor chaining is a technique in C# that allows one constructor to call another constructor in the same class. This can be useful for reusing common initialization logic across multiple constructors or for providing default values for constructor parameters. To chain constructors in C#, you use the this keyword followed by the appropriate constructor parameters, like this:
 ```
@@ -99,9 +100,11 @@ Console.WriteLine(sarah.GetAge()); // Output: 0
 ```
 In this example, the first constructor with two parameters calls the second constructor with one parameter using the this keyword. This allows the common initialization logic for the x parameter to be reused, while still allowing the y parameter to be initialized separately.
 <hr>
+
 ### 3. Can you use a "this" command within a static method? Why?
 No, you cannot use the this keyword within a static method in C#. The this keyword is used to refer to the current instance of a class, but static methods do not have an instance and are called on the class itself. Therefore, attempting to use this within a static method will result in a compile-time error.
 <hr>
+
 ### 4. Name some access modifiers available in C#
 C# has several access modifiers that can be used to control the visibility and accessibility of classes, methods, properties, and other members. These include:
 
@@ -111,6 +114,7 @@ C# has several access modifiers that can be used to control the visibility and a
 `internal`: The member is visible only within the assembly (i.e., the .NET DLL or EXE file) that defines it.<br>
 `protected internal`: The member is visible within the assembly and any derived classes, whether they are in the same assembly or not.<br>
 <hr>
+
 ### 5. Why does C# not support multiple inheritances?
 C# does not support multiple inheritances because it can lead to several problems, including the "diamond problem" where two base classes have a common method or property that is inherited by a derived class, leading to ambiguity about which implementation to use. To avoid these problems, C# supports interface inheritance, which allows a class to implement multiple interfaces but inherit from only one base class. This provides the benefits of multiple inheritance without the drawbacks.
 
