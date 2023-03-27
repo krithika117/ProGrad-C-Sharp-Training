@@ -711,10 +711,10 @@ public class Dog : Animal
 ## `abstract` vs `virtual`
 | Virtual                                          | Abstract                                         |
 |--------------------------------------------------|--------------------------------------------------|
-| Can have method body                             | Cannot have method body                          |
-| Can be overridden in derived classes             | Must be implemented by derived classes           |
-| Must have a default implementation in the base class  | No implementation in the base class              |
-| Use `virtual` keyword to declare                 | Use `abstract` keyword to declare                 |
+| Can have method body                             | Cannot have method body                                       |
+| Can be overridden in derived classes             | Must be implemented by derived classes                        |
+| Must have a default implementation in the base class  | No implementation in the base class                           |
+| Use `virtual` keyword to declare                 | Use `abstract` keyword to declare                              |
 
 ## `sealed` keyword
 Sealed entities cannot be inherited.
