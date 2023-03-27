@@ -8,16 +8,36 @@ namespace day_5_hands_on
 {
     public class Test
     {
+        public class Animal {
+            public void Category() {
+                Console.WriteLine("This is an animal not a bird.");
+            }
+            
+        }
 
-        public class Test1
-        {
-
-            protected void print1()
+        public class AnimalType : Animal {
+            public void Mammal() {
+                Console.WriteLine("Inherited Mammal");
+            }
+            public void Reptile()
             {
-                Console.WriteLine("Test class print1()");
-
+                Console.WriteLine("Reptile");
             }
         }
+        public class Dogs : AnimalType {
+            public void Dog() {
+                Mammal();
+                Console.WriteLine("Internal bow!");
+
+            }
+            public void Mammal()
+            {
+                Console.WriteLine("External Mammal");
+            }
+
+        }
+
+
 
     }
 }
