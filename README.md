@@ -9,6 +9,7 @@
   * [For loop](#for-loop)
   * [While Loop](#while-loop)
   * [Do while Loop](#do-while-loop)
+- [String Manipulation](#strings-manipulation)
 - [Arrays](#arrays)
   * [One dimensional](#one-dimensional)
   * [Multi dimensional](#multi-dimensional)
@@ -110,6 +111,35 @@ do
 }
 while (condition);
 ```
+## String Manipulation
+| Method Name | Description |
+|-------------|-------------|
+| `Length` | Gets the number of characters in the string |
+| `ToUpper()` | Returns a new string that converts all characters in this instance to uppercase |
+| `ToLower()` | Returns a new string that converts all characters in this instance to lowercase |
+| `Trim()` | Returns a new string in which all leading and trailing white-space characters are removed |
+| `Substring(int startIndex, int length)` | Retrieves a substring from this instance. The substring starts at a specified character position and has a specified length |
+| `IndexOf(char value)` | Returns the zero-based index of the first occurrence of the specified Unicode character in the string |
+| `IndexOf(string value)` | Returns the zero-based index of the first occurrence of the specified string in the string |
+| `Contains(string value)` | Returns a value indicating whether a specified substring occurs within this string |
+| `Replace(char oldChar, char newChar)` | Returns a new string in which all occurrences of a specified character in the current instance are replaced with another specified character |
+| `Replace(string oldValue, string newValue)` | Returns a new string in which all occurrences of a specified string in the current instance are replaced with another specified string |
+| `Split(char[] separator)` | Returns a string array that contains the substrings in this instance that are delimited by elements of a specified Unicode character array |
+| `StartsWith(string value)` | Determines whether the beginning of this string instance matches the specified string |
+| `EndsWith(string value)` | Determines whether the end of this string instance matches the specified string |
+| `Concat(string[] values)` | Concatenates one or more instances of String |
+| `Join(string separator, string[] value)` | Concatenates all the elements of a string array, using the specified separator between each element |
+| `Format(string format, object arg0)` | Replaces one or more format items in a specified string with the string representation of a specified object |
+| `Equals(object obj)` | Determines whether the specified object is equal to the current object |
+| `Equals(string value)` | Determines whether two specified strings have the same value |
+| `Compare(string strA, string strB)` | Compares two specified String objects and returns an integer that indicates their relative position in the sort order |
+| `CompareTo(string strB)` | Compares this instance with a specified object and indicates whether this instance precedes, follows, or appears in the same position in the sort order as the specified object |
+| `ToUpperInvariant()` | Returns a new string that converts all characters in this instance to uppercase, using the casing rules of the invariant culture |
+| `ToLowerInvariant()` | Returns a new string that converts all characters in this instance to lowercase, using the casing rules of the invariant culture |
+| `ToCharArray()` | Copies the characters in this instance to a Unicode character array |
+| `PadLeft(int totalWidth)` | Returns a new string that left-aligns the characters in this string by padding them with spaces on the right, for a specified total length |
+| `PadRight(int totalWidth)` | Returns a new string that right-aligns the characters in this string by padding them with spaces on the right, for a specified total length |
+
 ## Arrays
 ### One dimensional 
 ```
