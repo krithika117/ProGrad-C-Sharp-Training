@@ -539,4 +539,44 @@ class Program {
 // Error CS0509 ‘Example’ : cannot derive from sealed type ‘Test’
 ```
 # File Handling
-## 
+## Using File
+```
+File.WriteAllText("C:\\Users\\HP\\source\\repos\\day-5-hands-on\\files-created\\filedemoplain.txt", "This is Krithika");
+```
+## Using FileWriter 
+```
+string s = "Hello!";
+Console.WriteLine("Inside File handling");
+FileStream fs = new FileStream("C:\\Users\\HP\\source\\repos\\day-5-hands-on\\files-created\\filename.txt", FileMode.OpenOrCreate);
+byte[] content = Encoding.UTF8.GetBytes(s);
+fs.Write(content, 0, content.Length);
+fs.Close();
+```
+## Using StreamWriter and StreamReader
+```
+FileStream fs1 = new FileStream("C:\\Users\\HP\\source\\repos\\day-5-hands-on\\files-created\\textwriter.txt", FileMode.OpenOrCreate, FileAccess.ReadWrite);
+Stream stream = new MemoryStream();
+StreamWriter writer = new StreamWriter(fs1);
+writer.WriteLine("StreamWriter Demo");
+Console.WriteLine("Written");
+writer.Close();
+
+StreamReader reader = new StreamReader(fs1);
+string c = reader.ReadToEnd();
+Console.WriteLine(c);
+fs1.Close();
+```
+## Using TextWriter and TextReader
+```
+const string path = "C:\\Users\\HP\\source\\repos\\day-5-hands-on\\files-created\\textwriter.txt";
+using (TextWriter textWriter = File.CreateText(path))
+{
+    char[] charArray = { 'h', 'e', 'l', 'l', 'o' };
+    textWriter.WriteLine(charArray);
+}
+
+using (TextReader textReader = File.OpenText(path))
+{
+    Console.WriteLine(textReader.Read());
+}
+```
