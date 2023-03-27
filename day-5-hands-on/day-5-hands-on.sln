@@ -5,6 +5,13 @@ VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "day-5-hands-on", "day-5-hands-on\day-5-hands-on.csproj", "{1BBE6C09-5A98-4C29-921A-C382A63745FB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "file-handling", "file-handling\file-handling.csproj", "{1EB02E72-537B-479C-826E-A5DE597E49F1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EF25D91E-ECDD-4A3E-A18B-76A3E59F7EF8}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +22,10 @@ Global
 		{1BBE6C09-5A98-4C29-921A-C382A63745FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BBE6C09-5A98-4C29-921A-C382A63745FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1BBE6C09-5A98-4C29-921A-C382A63745FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EB02E72-537B-479C-826E-A5DE597E49F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EB02E72-537B-479C-826E-A5DE597E49F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EB02E72-537B-479C-826E-A5DE597E49F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EB02E72-537B-479C-826E-A5DE597E49F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

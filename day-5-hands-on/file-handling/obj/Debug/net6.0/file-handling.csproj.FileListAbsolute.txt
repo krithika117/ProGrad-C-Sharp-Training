@@ -1,0 +1,15 @@
+C:\Users\HP\source\repos\day-5-hands-on\file-handling\bin\Debug\net6.0\file-handling.exe
+C:\Users\HP\source\repos\day-5-hands-on\file-handling\bin\Debug\net6.0\file-handling.deps.json
+C:\Users\HP\source\repos\day-5-hands-on\file-handling\bin\Debug\net6.0\file-handling.runtimeconfig.json
+C:\Users\HP\source\repos\day-5-hands-on\file-handling\bin\Debug\net6.0\file-handling.dll
+C:\Users\HP\source\repos\day-5-hands-on\file-handling\bin\Debug\net6.0\file-handling.pdb
+C:\Users\HP\source\repos\day-5-hands-on\file-handling\obj\Debug\net6.0\file-handling.csproj.AssemblyReference.cache
+C:\Users\HP\source\repos\day-5-hands-on\file-handling\obj\Debug\net6.0\file-handling.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\source\repos\day-5-hands-on\file-handling\obj\Debug\net6.0\file-handling.AssemblyInfoInputs.cache
+C:\Users\HP\source\repos\day-5-hands-on\file-handling\obj\Debug\net6.0\file-handling.AssemblyInfo.cs
+C:\Users\HP\source\repos\day-5-hands-on\file-handling\obj\Debug\net6.0\file-handling.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\day-5-hands-on\file-handling\obj\Debug\net6.0\file-handling.dll
+C:\Users\HP\source\repos\day-5-hands-on\file-handling\obj\Debug\net6.0\refint\file-handling.dll
+C:\Users\HP\source\repos\day-5-hands-on\file-handling\obj\Debug\net6.0\file-handling.pdb
+C:\Users\HP\source\repos\day-5-hands-on\file-handling\obj\Debug\net6.0\file-handling.genruntimeconfig.cache
+C:\Users\HP\source\repos\day-5-hands-on\file-handling\obj\Debug\net6.0\ref\file-handling.dll
