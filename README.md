@@ -38,6 +38,7 @@
 - [Delegates](#delegates)
   * [Delegate between classes](#delegate-between-classes)
   * [Multi Cast delegate](#multi-cast-delegate)
+  * [`getInvocationList()`](#getInvocationList)
   
 ### [OOPS Concepts](#oops-concepts-1)
 - [Access Specifiers](#access-specifiers)
@@ -597,6 +598,37 @@ class Calculator
     {
         return x * y;
     }
+}
+```
+### `getInvocationList()`
+```
+delegate int mathOperations(int a, int b);
+static void Main(string[] args)
+{
+    mathOperations total = Add;
+    total += Subtract;
+    total += Multiply;
+
+    foreach (var method in total.GetInvocationList())
+
+    {
+        Console.WriteLine(method.DynamicInvoke(5,3));
+    }
+}
+
+public static int Add(int x, int y)
+{
+    return x + y;
+}
+
+public static int Subtract(int x, int y)
+{
+    return x - y;
+}
+
+public static int Multiply(int x, int y)
+{
+    return x * y;
 }
 ```
 
