@@ -561,7 +561,46 @@ internal class Program
 ```
 ### Multi Cast Delegate
 ```
+delegate int CalculateDelegate(int x, int y);
 
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Create instances of the delegate, specifying the method to call
+        CalculateDelegate add = new CalculateDelegate(new Calculator().Add);
+        CalculateDelegate subtract = new CalculateDelegate(new Calculator().Subtract);
+        CalculateDelegate multiply = new CalculateDelegate(new Calculator().Multiply);
+       
+        // Invoke the delegate
+        int result1 = add.Invoke(5, 3);
+        int result2 = subtract.Invoke(5, 3);
+        int result3 = multiply.Invoke(5, 3);
+
+        Console.WriteLine("Addition result: " + result1);
+        Console.WriteLine("Subtraction result: " + result2);
+        Console.WriteLine("Multiplication result: " + result3);
+    }
+}
+
+// A class with methods to be called via delegate
+class Calculator
+{
+    public int Add(int x, int y)
+    {
+        return x + y;
+    }
+
+    public int Subtract(int x, int y)
+    {
+        return x - y;
+    }
+
+    public int Multiply(int x, int y)
+    {
+        return x * y;
+    }
+}
 ```
 
 # OOPS Concepts
