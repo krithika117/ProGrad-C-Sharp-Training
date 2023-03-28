@@ -662,7 +662,13 @@ internal class LambdaDemo
     }
 }
 ```
-
+```
+public static void Main(String[] args)
+{
+    var greater = (int num1, int num2) => (num1 > num2) ? num1 : num2;
+    Console.WriteLine(greater(9, 8));
+}
+```
 # OOPS Concepts
 ## Access Specifiers
 | Caller location         | Public | Protected Internal | Protected | Internal | Private Protected | Private |
