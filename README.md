@@ -39,6 +39,7 @@
   * [Delegate between classes](#delegate-between-classes)
   * [Multi Cast delegate](#multi-cast-delegate)
   * [`getInvocationList()`](#getInvocationList)
+- [Anonymous Methods](#anonymous-methods)
   
 ### [OOPS Concepts](#oops-concepts-1)
 - [Access Specifiers](#access-specifiers)
@@ -629,6 +630,17 @@ public static int Subtract(int x, int y)
 public static int Multiply(int x, int y)
 {
     return x * y;
+}
+```
+## Anonymous Methods
+```
+delegate int DelegateForSum(int x, int y);
+internal class AnonymousFunctionsDemo
+{
+    public static void Main(String [] args){
+        DelegateForSum dAdd = delegate (int a, int b) { return a + b; };
+        Console.WriteLine(dAdd(3, 4));
+    }
 }
 ```
 
