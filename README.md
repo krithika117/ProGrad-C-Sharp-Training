@@ -41,6 +41,7 @@
   * [`getInvocationList()`](#getInvocationList)
 - [Anonymous Methods](#anonymous-methods)
 - [Lambda Functions](#lambda-functions)
+- [`get` and `set`](#get-and-set)
   
 ### [OOPS Concepts](#oops-concepts-1)
 - [Access Specifiers](#access-specifiers)
@@ -685,6 +686,30 @@ public static void Main(String[] args)
     Console.WriteLine(string.Join(" ", divisible_by_5));
 }
 ```
+## `get` and `set`
+```
+internal class Student
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public int Age { get; set; }
+
+    public static void Main(string[] args)
+    {
+
+        List<Student> student_list = new List<Student>();
+        student_list.Add(new Student() { Id = 1, Name = "Krithika", Age = 20});
+        student_list.Add(new Student() { Id = 2, Name = "Sai", Age = 20});
+        student_list.Add(new Student() { Id = 3, Name = "Priya", Age = 20});
+        student_list.Add(new Student() { Id = 4, Name = "Nithya", Age = 20});
+        foreach (Student student in student_list)
+        {
+            Console.WriteLine("Name = "+student.Name);
+
+        }
+    }
+}
+ ```
 
 # OOPS Concepts
 ## Access Specifiers
