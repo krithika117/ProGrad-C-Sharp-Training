@@ -1,4 +1,4 @@
-## Exploratory Questions - Week 1
+# Exploratory Questions - Week 1
 ### 1. What is IEnumerable in C#?
 - IEnumerable is an interface in C# that represents a collection of objects that can be enumerated or iterated over. The IEnumerable interface requires the implementation of a single method: `GetEnumerator()`, which returns an IEnumerator object that can be used to iterate over the collection.
 - In C#, when you use a foreach loop to iterate over an array, the compiler automatically generates code that uses the `IEnumerable` and `IEnumerator` interfaces to perform the iteration. These interfaces provide a standard way to iterate over a collection of items, and are used behind the scenes to make the foreach loop work with different types of collections.
