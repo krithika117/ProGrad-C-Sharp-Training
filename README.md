@@ -662,6 +662,29 @@ internal class LambdaDemo
     }
 }
 ```
+```
+public static void Main(String[] args)
+{
+    var greater = (int num1, int num2) => (num1 > num2) ? num1 : num2;
+    Console.WriteLine(greater(9, 8));
+}
+```
+```
+public static void Main(String[] args)
+{
+    var sum = (int num1, int num2) => (num1 + num2); 
+    var sub = (int sum, int num2) => (sum - num2);    
+    Console.WriteLine(sub(sum(9,8), 1));
+}
+```
+```
+public static void Main(String[] args)
+{
+    List<int> L1 = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    List<int> divisible_by_5 = (L1).FindAll((int n) => n % 5 == 0);
+    Console.WriteLine(string.Join(" ", divisible_by_5));
+}
+```
 
 # OOPS Concepts
 ## Access Specifiers
