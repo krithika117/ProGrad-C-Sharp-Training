@@ -35,6 +35,7 @@
   * [Sorted Set](#sorted-set)
   * [Sorted Dictionary](#sorted-dictionary)
   * [Sorted List](#sorted-list)
+- [Delegates](#delegates)
   
 ### [OOPS Concepts](#oops-concepts-1)
 - [Access Specifiers](#access-specifiers)
@@ -519,6 +520,24 @@ foreach (KeyValuePair<string, int> kvp in sortedList)
     Console.WriteLine("Key = {0}, Value = {1}", kvp.Key, kvp.Value);
 }
 ```
+## Delegates
+```
+// Declare a delegate
+delegate int additionDelegate(int a, int b);
+internal class Program
+{
+    public static int addNumbers(int a, int b) {
+        return a + b;
+    }
+    static void Main(string[] args)
+    {
+        additionDelegate adder = addNumbers;
+        Console.WriteLine(adder.Invoke(5, 9));
+        Console.WriteLine(adder(15, 9));
+    }
+}
+```
+
 # OOPS Concepts
 ## Access Specifiers
 | Caller location         | Public | Protected Internal | Protected | Internal | Private Protected | Private |
