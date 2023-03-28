@@ -36,8 +36,8 @@
   * [Sorted Dictionary](#sorted-dictionary)
   * [Sorted List](#sorted-list)
 - [Delegates](#delegates)
-  * [Deligate between classes](#deligate-between-classes)
-  * [Multi cast deligate](#multi-cast-deligate)
+  * [Delegate between classes](#delegate-between-classes)
+  * [Multi Cast delegate](#multi-cast-delegate)
   
 ### [OOPS Concepts](#oops-concepts-1)
 - [Access Specifiers](#access-specifiers)
