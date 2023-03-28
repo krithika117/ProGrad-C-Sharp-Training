@@ -669,6 +669,15 @@ public static void Main(String[] args)
     Console.WriteLine(greater(9, 8));
 }
 ```
+```
+public static void Main(String[] args)
+{
+    var sum = (int num1, int num2) => (num1 + num2); 
+    var sub = (int sum, int num2) => (sum - num2);    
+    Console.WriteLine(sub(sum(9,8), 1));
+}
+```
+
 # OOPS Concepts
 ## Access Specifiers
 | Caller location         | Public | Protected Internal | Protected | Internal | Private Protected | Private |
