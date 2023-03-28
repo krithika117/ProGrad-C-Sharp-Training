@@ -36,6 +36,8 @@
   * [Sorted Dictionary](#sorted-dictionary)
   * [Sorted List](#sorted-list)
 - [Delegates](#delegates)
+  * [Deligate between classes](#deligate-between-classes)
+  * [Multi cast deligate](#multi-cast-deligate)
   
 ### [OOPS Concepts](#oops-concepts-1)
 - [Access Specifiers](#access-specifiers)
@@ -536,6 +538,30 @@ internal class Program
         Console.WriteLine(adder(15, 9));
     }
 }
+```
+### Delegate between classes
+```
+public class MyClass
+{
+    public delegate int DelegateAdd(int a, int b);
+}
+internal class Program
+{
+    static int Add(int a, int b)
+    { return a + b; }
+    //static int Sub(int a,int b) {  return a - b; }
+    public static void Main(string[] args)
+    {
+        MyClass obj = new MyClass();
+        MyClass.DelegateAdd Dsum = Add;
+        Console.WriteLine(Dsum(2, 4));
+        Console.WriteLine(Dsum.Invoke(2, 5));
+    }
+}
+```
+### Multi Cast Delegate
+```
+
 ```
 
 # OOPS Concepts
