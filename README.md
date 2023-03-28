@@ -1,7 +1,7 @@
 # ProGrad C# Training
 
 ## Table of Contents
-
+### [Fundamentals](#fundamentals-1)
 - [Basic C# Syntax](#basic-c-syntax)
 - [Conditional Statements](#conditional-statements)
   * [if-else](#if-else)
@@ -9,6 +9,7 @@
   * [For loop](#for-loop)
   * [While Loop](#while-loop)
   * [Do while Loop](#do-while-loop)
+- [String Manipulation](#string-manipulation)
 - [Arrays](#arrays)
   * [One dimensional](#one-dimensional)
   * [Multi dimensional](#multi-dimensional)
@@ -34,12 +35,34 @@
   * [Sorted Set](#sorted-set)
   * [Sorted Dictionary](#sorted-dictionary)
   * [Sorted List](#sorted-list)
-- [OOPS Concepts](#oops-concepts)
+- [Delegates](#delegates)
+  * [Delegate between classes](#delegate-between-classes)
+  * [Multi Cast delegate](#multi-cast-delegate)
+  * [`getInvocationList()`](#getInvocationList)
+- [Anonymous Methods](#anonymous-methods)
+- [Lambda Functions](#lambda-functions)
+  
+### [OOPS Concepts](#oops-concepts-1)
 - [Access Specifiers](#access-specifiers)
 - [Method Overloading](#method-overloading)
+- [Method Overriding](#method-overriding)
+- [Inheritance](#inheritance)
+  * [Single Inheritance](#single-inheritance)
+  * [Multi-level Inheritance](#multi-level-inheritance)
+  * [Hierarchical Inheritance](#hierarchical-inheritance)
+- [Interfaces](#interfaces)
+- [`abstract` keyword](#abstract-keyword)
+- [`virtual` keyword](#virtual-keyword)
+- [`abstract` vs `virtual`](#abstract-vs-virtual)
 - [`sealed` keyword](#sealed-keyword)
 
+### [File Handling](#file-handling-1)
+- [Using File](#using-file)
+- [Using FileWriter](#using-filewriter)
+- [Using StreamWriter and StreamReader](#using-streamwriter-and-streamreader)
+- [Using TextWriter and TextReader](#using-textwriter-and-textreader)
 
+# Fundamentals
 ## Basic C# Syntax
 ```
 using System;
@@ -54,7 +77,6 @@ namespace HelloWorld
     }
   }
 }
-
 ```
 ## Conditional Statements
 ### if-else
@@ -86,7 +108,6 @@ while (condition)
 {
     // code to execute while the condition is true
 }
-
 ```
 ### Do while Loop
 ```
@@ -95,8 +116,36 @@ do
     // code to execute at least once, and then repeatedly while the condition is true
 }
 while (condition);
-
 ```
+## String Manipulation
+| Method Name | Description |
+|-------------|-------------|
+| `Length` | Gets the number of characters in the string |
+| `ToUpper()` | Returns a new string that converts all characters in this instance to uppercase |
+| `ToLower()` | Returns a new string that converts all characters in this instance to lowercase |
+| `Trim()` | Returns a new string in which all leading and trailing white-space characters are removed |
+| `Substring(int startIndex, int length)` | Retrieves a substring from this instance. The substring starts at a specified character position and has a specified length |
+| `IndexOf(char value)` | Returns the zero-based index of the first occurrence of the specified Unicode character in the string |
+| `IndexOf(string value)` | Returns the zero-based index of the first occurrence of the specified string in the string |
+| `Contains(string value)` | Returns a value indicating whether a specified substring occurs within this string |
+| `Replace(char oldChar, char newChar)` | Returns a new string in which all occurrences of a specified character in the current instance are replaced with another specified character |
+| `Replace(string oldValue, string newValue)` | Returns a new string in which all occurrences of a specified string in the current instance are replaced with another specified string |
+| `Split(char[] separator)` | Returns a string array that contains the substrings in this instance that are delimited by elements of a specified Unicode character array |
+| `StartsWith(string value)` | Determines whether the beginning of this string instance matches the specified string |
+| `EndsWith(string value)` | Determines whether the end of this string instance matches the specified string |
+| `Concat(string[] values)` | Concatenates one or more instances of String |
+| `Join(string separator, string[] value)` | Concatenates all the elements of a string array, using the specified separator between each element |
+| `Format(string format, object arg0)` | Replaces one or more format items in a specified string with the string representation of a specified object |
+| `Equals(object obj)` | Determines whether the specified object is equal to the current object |
+| `Equals(string value)` | Determines whether two specified strings have the same value |
+| `Compare(string strA, string strB)` | Compares two specified String objects and returns an integer that indicates their relative position in the sort order |
+| `CompareTo(string strB)` | Compares this instance with a specified object and indicates whether this instance precedes, follows, or appears in the same position in the sort order as the specified object |
+| `ToUpperInvariant()` | Returns a new string that converts all characters in this instance to uppercase, using the casing rules of the invariant culture |
+| `ToLowerInvariant()` | Returns a new string that converts all characters in this instance to lowercase, using the casing rules of the invariant culture |
+| `ToCharArray()` | Copies the characters in this instance to a Unicode character array |
+| `PadLeft(int totalWidth)` | Returns a new string that left-aligns the characters in this string by padding them with spaces on the right, for a specified total length |
+| `PadRight(int totalWidth)` | Returns a new string that right-aligns the characters in this string by padding them with spaces on the right, for a specified total length |
+
 ## Arrays
 ### One dimensional 
 ```
@@ -476,6 +525,144 @@ foreach (KeyValuePair<string, int> kvp in sortedList)
     Console.WriteLine("Key = {0}, Value = {1}", kvp.Key, kvp.Value);
 }
 ```
+## Delegates
+```
+// Declare a delegate
+delegate int additionDelegate(int a, int b);
+internal class Program
+{
+    public static int addNumbers(int a, int b) {
+        return a + b;
+    }
+    static void Main(string[] args)
+    {
+        additionDelegate adder = addNumbers;
+        Console.WriteLine(adder.Invoke(5, 9));
+        Console.WriteLine(adder(15, 9));
+    }
+}
+```
+### Delegate between classes
+```
+public class MyClass
+{
+    public delegate int DelegateAdd(int a, int b);
+}
+internal class Program
+{
+    static int Add(int a, int b)
+    { return a + b; }
+    //static int Sub(int a,int b) {  return a - b; }
+    public static void Main(string[] args)
+    {
+        MyClass obj = new MyClass();
+        MyClass.DelegateAdd Dsum = Add;
+        Console.WriteLine(Dsum(2, 4));
+        Console.WriteLine(Dsum.Invoke(2, 5));
+    }
+}
+```
+### Multi Cast Delegate
+```
+delegate int CalculateDelegate(int x, int y);
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        CalculateDelegate add = new CalculateDelegate(new Calculator().Add);
+        CalculateDelegate subtract = new CalculateDelegate(new Calculator().Subtract);
+        CalculateDelegate multiply = new CalculateDelegate(new Calculator().Multiply);
+       
+        int result1 = add.Invoke(5, 3);
+        int result2 = subtract.Invoke(5, 3);
+        int result3 = multiply.Invoke(5, 3);
+
+        Console.WriteLine("Addition result: " + result1);
+        Console.WriteLine("Subtraction result: " + result2);
+        Console.WriteLine("Multiplication result: " + result3);
+    }
+}
+
+class Calculator
+{
+    public int Add(int x, int y)
+    {
+        return x + y;
+    }
+
+    public int Subtract(int x, int y)
+    {
+        return x - y;
+    }
+
+    public int Multiply(int x, int y)
+    {
+        return x * y;
+    }
+}
+```
+### `getInvocationList()`
+```
+delegate int mathOperations(int a, int b);
+static void Main(string[] args)
+{
+    mathOperations total = Add;
+    total += Subtract;
+    total += Multiply;
+
+    foreach (var method in total.GetInvocationList())
+
+    {
+        Console.WriteLine(method.DynamicInvoke(5,3));
+    }
+}
+
+public static int Add(int x, int y)
+{
+    return x + y;
+}
+
+public static int Subtract(int x, int y)
+{
+    return x - y;
+}
+
+public static int Multiply(int x, int y)
+{
+    return x * y;
+}
+```
+## Anonymous Methods
+```
+delegate int DelegateForSum(int x, int y);
+delegate void printMessage(string s);
+delegate void noParameter();
+internal class AnonymousFunctionsDemo
+{
+    public static void Main(String [] args){
+        DelegateForSum dAdd = delegate (int a, int b) { return a + b; };
+        printMessage dMesssage = delegate (string s) { Console.WriteLine("Hello " + s); };
+        noParameter np = delegate () { Console.WriteLine("No Paramter"); };
+        Console.WriteLine(dAdd(3, 4));
+        dMesssage("Krithika");
+        np();
+    }
+}
+```
+## Lambda Functions
+```
+internal class LambdaDemo
+{
+    delegate int GreatestDelegate(int a, int b);
+    public static void Main(String[] args)
+    {
+        GreatestDelegate sum = (num1, num2) => (num1 > num2) ? num1 : num2 ;
+        Console.WriteLine(sum(9, 8));
+    }
+}
+```
+
 # OOPS Concepts
 ## Access Specifiers
 | Caller location         | Public | Protected Internal | Protected | Internal | Private Protected | Private |
@@ -507,11 +694,205 @@ class Program
 // No Parameters
 // 1 Parameter = Krithika
 ```
+## Method Overriding
+```
+class Animal
+{
+    public virtual void MakeSound()
+    {
+        Console.WriteLine("The animal makes a sound");
+    }
+}
+
+class Dog : Animal
+{
+    public override void MakeSound()
+    {
+        Console.WriteLine("The dog barks");
+    }
+}
+```
+```
+Animal animal = new Animal();
+animal.MakeSound(); // writes "The animal makes a sound" to the console
+
+Dog dog = new Dog();
+dog.MakeSound(); // writes "The dog barks" to the console
+```
+## Inheritance
+### Single Inheritance
+```
+public class Animal
+{
+    public void Eat()
+    {
+        Console.WriteLine("Eating...");
+    }
+}
+
+public class Dog : Animal
+{
+    public void Bark()
+    {
+        Console.WriteLine("Barking...");
+    }
+}
+
+Dog myDog = new Dog();
+myDog.Eat();
+myDog.Bark();
+```
+### Multi-level Inheritance
+```
+public class Animal
+{
+    public void Eat()
+    {
+        Console.WriteLine("Eating...");
+    }
+}
+
+public class Mammal : Animal
+{
+    public void Run()
+    {
+        Console.WriteLine("Running...");
+    }
+}
+
+public class Dog : Mammal
+{
+    public void Bark()
+    {
+        Console.WriteLine("Barking...");
+    }
+}
+
+Dog myDog = new Dog();
+myDog.Eat();
+myDog.Run();
+myDog.Bark();
+```
+### Hierarchical Inheritance
+```
+public class Animal
+{
+    public void Eat()
+    {
+        Console.WriteLine("Eating...");
+    }
+}
+
+public class Dog : Animal
+{
+    public void Bark()
+    {
+        Console.WriteLine("Barking...");
+    }
+}
+
+public class Cat : Animal
+{
+    public void Meow()
+    {
+        Console.WriteLine("Meowing...");
+    }
+}
+
+Dog myDog = new Dog();
+myDog.Eat();
+myDog.Bark();
+
+Cat myCat = new Cat();
+myCat.Eat();
+myCat.Meow();
+```
+## Interfaces
+Interfaces can be used to establish Multiple inheritance without the need for classes.
+```
+using System;
+
+interface IAnimal
+{
+    void Move();
+}
+
+interface IPet
+{
+    void Play();
+}
+
+class Cat : IAnimal, IPet
+{
+    public void Move()
+    {
+        Console.WriteLine("Cat is walking");
+    }
+
+    public void Play()
+    {
+        Console.WriteLine("Cat is playing");
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Cat myCat = new Cat();
+        myCat.Move();
+        myCat.Play();
+    }
+}
+```
+## `abstract` keyword
+```
+public abstract class Animal
+{
+    public abstract void Speak(); // abstract method
+}
+
+public class Dog : Animal
+{
+    public override void Speak() // implement the abstract method in derived class
+    {
+        Console.WriteLine("Bark!");
+    }
+}
+```
+```
+Animal a = new Dog();
+a.Speak(); // output: Bark!
+```
+## `virtual` keyword
+```
+public class Animal
+{
+    public virtual void MakeSound()
+    {
+        Console.WriteLine("The animal makes a sound.");
+    }
+}
+
+public class Dog : Animal
+{
+    public override void MakeSound()
+    {
+        Console.WriteLine("The dog barks.");
+    }
+}
+```
+## `abstract` vs `virtual`
+| Virtual                                          | Abstract                                         |
+|--------------------------------------------------|--------------------------------------------------|
+| Can have method body                             | Cannot have method body                                       |
+| Can be overridden in derived classes             | Must be implemented by derived classes                        |
+| Must have a default implementation in the base class  | No implementation in the base class                           |
+| Use `virtual` keyword to declare                 | Use `abstract` keyword to declare                              |
+
 ## `sealed` keyword
 Sealed entities cannot be inherited.
 ```
-// C# code to show restrictions
-// of a Sealed Class
 using System;
 
 class Bird {
@@ -539,4 +920,44 @@ class Program {
 // Error CS0509 ‘Example’ : cannot derive from sealed type ‘Test’
 ```
 # File Handling
-## 
+## Using File
+```
+File.WriteAllText("C:\\Users\\HP\\source\\repos\\day-5-hands-on\\files-created\\filedemoplain.txt", "This is Krithika");
+```
+## Using FileWriter 
+```
+string s = "Hello!";
+Console.WriteLine("Inside File handling");
+FileStream fs = new FileStream("C:\\Users\\HP\\source\\repos\\day-5-hands-on\\files-created\\filename.txt", FileMode.OpenOrCreate);
+byte[] content = Encoding.UTF8.GetBytes(s);
+fs.Write(content, 0, content.Length);
+fs.Close();
+```
+## Using StreamWriter and StreamReader
+```
+FileStream fs1 = new FileStream("C:\\Users\\HP\\source\\repos\\day-5-hands-on\\files-created\\textwriter.txt", FileMode.OpenOrCreate, FileAccess.ReadWrite);
+Stream stream = new MemoryStream();
+StreamWriter writer = new StreamWriter(fs1);
+writer.WriteLine("StreamWriter Demo");
+Console.WriteLine("Written");
+writer.Close();
+
+StreamReader reader = new StreamReader(fs1);
+string c = reader.ReadToEnd();
+Console.WriteLine(c);
+fs1.Close();
+```
+## Using TextWriter and TextReader
+```
+const string path = "C:\\Users\\HP\\source\\repos\\day-5-hands-on\\files-created\\textwriter.txt";
+using (TextWriter textWriter = File.CreateText(path))
+{
+    char[] charArray = { 'h', 'e', 'l', 'l', 'o' };
+    textWriter.WriteLine(charArray);
+}
+
+using (TextReader textReader = File.OpenText(path))
+{
+    Console.WriteLine(textReader.Read());
+}
+```
