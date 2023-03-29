@@ -42,6 +42,9 @@
 - [Anonymous Methods](#anonymous-methods)
 - [Lambda Functions](#lambda-functions)
 - [`get` and `set`](#get-and-set)
+- [`Action` keyword](#action-keyword)
+- [`Func` keyword](#func-keyword)
+- [`Predicate` keyword](#predicate-keyword)
   
 ### [OOPS Concepts](#oops-concepts-1)
 - [Access Specifiers](#access-specifiers)
@@ -710,6 +713,25 @@ internal class Student
     }
 }
  ```
+## `Action` keyword
+It is a type of built-in delegate.
+```
+Action<string> writerDelegate = (message) => Console.WriteLine("The message is = " + message);
+writerDelegate("Test Message");
+```
+## `Func` keyword
+It is a type of built-in delegate. But we can specify output parameters as well.
+```
+Func<int, int, int> multiplier = (a, b) =>  a * b;
+Console.WriteLine("Product = " +multiplier(11, 7));
+```
+## `Predicate` keyword
+```
+List<int> numbers = new List<int> { 2, 7, 4, 9, 1, 5, 6, 3 };
+Predicate<int> p = x => x > 5;
+List<int> greaterThanFive = numbers.FindAll(p);
+Console.WriteLine(string.Join(" ",greaterThanFive));
+```
 
 # OOPS Concepts
 ## Access Specifiers
