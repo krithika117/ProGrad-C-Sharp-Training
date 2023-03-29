@@ -66,6 +66,9 @@
 - [Using StreamWriter and StreamReader](#using-streamwriter-and-streamreader)
 - [Using TextWriter and TextReader](#using-textwriter-and-textreader)
 
+### [Asynchronous Programming](#asynchronous-programming)
+
+
 # Fundamentals
 ## Basic C# Syntax
 ```
@@ -1030,4 +1033,75 @@ using (TextReader textReader = File.OpenText(path))
 {
     Console.WriteLine(textReader.Read());
 }
+```
+
+# Asynchronous Programming
+## `async()` and `await()`
+```
+internal class newClass
+{
+
+    public async Task<string> Method1()
+    {
+        Console.WriteLine("Method 1 started");
+        await Task.Delay(6000);
+        Console.WriteLine("Method 1 ended");
+        return "";
+    }
+
+    public async Task<string> Method2()
+    {
+        Console.WriteLine("Method 2 started");
+        await Task.Delay(4000);
+        Console.WriteLine("Method 2 ended");
+        return "";
+    }
+    public async Task<string> Method3()
+    {
+        Console.WriteLine("Method 3 started");
+        await Task.Delay(2000);
+        Console.WriteLine("Method 3 ended");
+        return "";
+    }
+}
+internal class AsyncProgramming
+{
+    static async Task Main(string[] args)
+    {
+
+        newClass obj = new newClass();
+        Console.WriteLine("Without await");
+        obj.Method1();
+        obj.Method2();
+        obj.Method3();
+        Console.ReadLine();
+        Console.WriteLine("With await");
+
+        await obj.Method1();
+        await obj.Method2();
+        await obj.Method3();
+        Console.ReadLine();
+
+    }
+
+}
+
+/*
+Output
+Without await
+Method 1 started
+Method 2 started
+Method 3 started
+Method 3 ended
+Method 2 ended
+Method 1 ended
+ok
+With await
+Method 1 started
+Method 1 ended
+Method 2 started
+Method 2 ended
+Method 3 started
+Method 3 ended
+*/
 ```
