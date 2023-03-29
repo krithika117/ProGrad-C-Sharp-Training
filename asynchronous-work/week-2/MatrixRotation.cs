@@ -5,7 +5,7 @@ class Program
     public static void Main(string[] args)
     {
         int[,] square_matrix = {
-            { 1, 2, 3},
+            { 1, 2, 3 },
             { 4, 5, 6 },
             { 7, 8, 9 }
         };
@@ -17,10 +17,10 @@ class Program
         };
 
         int[,] rectangular_matrix2 = {
-            { 1, 2, 3},
-            { 4, 5, 6},
-            { 7, 8, 9},
-            { 10, 11, 12}
+            { 1, 2, 3 },
+            { 4, 5, 6 },
+            { 7, 8, 9 },
+            { 10, 11, 12 }
         };
 
         Console.WriteLine("Rectangular matrix where columns > rows:");
