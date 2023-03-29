@@ -10,20 +10,32 @@ class Program
             { 7, 8, 9 }
         };
 
-        int[,] rectangular_matrix = {
+        int[,] rectangular_matrix1 = {
             { 1, 2, 3, 4},
             { 5, 6, 7, 8 },
             { 9, 10, 11, 12 }
         };
 
-        
+        int[,] rectangular_matrix2 = {
+            { 1, 2, 3},
+            { 4, 5, 6},
+            { 7, 8, 9},
+            { 10, 11, 12}
+        };
 
-        Console.WriteLine("Rectangular matrix:");
+        Console.WriteLine("Rectangular matrix where columns > rows:");
         Console.WriteLine("Original matrix:");
-        PrintMatrix(rectangular_matrix);
-        MatrixRotationBy90Degrees(rectangular_matrix);
-        MatrixRotationBy180Degrees(rectangular_matrix);
-        MatrixRotationBy270Degrees(rectangular_matrix);
+        PrintMatrix(rectangular_matrix1);
+        MatrixRotationBy90Degrees(rectangular_matrix1);
+        MatrixRotationBy180Degrees(rectangular_matrix1);
+        MatrixRotationBy270Degrees(rectangular_matrix1);
+
+        Console.WriteLine("Rectangular matrix where columns < rows:");
+        Console.WriteLine("Original matrix:");
+        PrintMatrix(rectangular_matrix2);
+        MatrixRotationBy90Degrees(rectangular_matrix2);
+        MatrixRotationBy180Degrees(rectangular_matrix2);
+        MatrixRotationBy270Degrees(rectangular_matrix2);
 
         Console.WriteLine("Square matrix:");
         Console.WriteLine("Original matrix:");
