@@ -66,7 +66,8 @@
 - [Using StreamWriter and StreamReader](#using-streamwriter-and-streamreader)
 - [Using TextWriter and TextReader](#using-textwriter-and-textreader)
 
-### [Asynchronous Programming](#asynchronous-programming)
+### [Asynchronous Programming](#asynchronous-programming-1)
+- [`async()` and `await()`] keywords
 
 
 # Fundamentals
