@@ -1,21 +1,56 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace MyApp // Note: actual namespace depends on the project name.
+namespace OOPS
 {
-    internal class Asynchronous
+    internal class newClass
     {
-        public static async void method1()
+
+        public async Task<string> Method1()
+        {
+            Console.WriteLine("Method 1 started");
+            await Task.Delay(6000);
+            Console.WriteLine("Method 1 ended");
+            return "";
+        }
+
+        public async Task<string> Method2()
+        {
+            Console.WriteLine("Method 2 started");
+            await Task.Delay(4000);
+            Console.WriteLine("Method 2 ended");
+            return "";
+        }
+        public async Task<string> Method3()
+        {
+            Console.WriteLine("Method 3 started");
+            await Task.Delay(2000);
+            Console.WriteLine("Method 3 ended");
+            return "";
+        }
+    }
+    internal class AsyncProgramming
+    {
+        static async Task Main(string[] args)
         {
 
-            Console.WriteLine("M1Start");
-            await Task.Delay(3000);
-            Console.WriteLine("M1End");
+            newClass obj = new newClass();
+            Console.WriteLine("Without await");
+            obj.Method1();
+            obj.Method2();
+            obj.Method3();
+            Console.ReadLine();
+            Console.WriteLine("With await");
+
+            await obj.Method1();
+            await obj.Method2();
+            await obj.Method3();
+            Console.ReadLine();
+
         }
-        public static async void method2()
-        {
-            Console.WriteLine("M2Start");
-            await Task.Delay(3000);
-            Console.WriteLine("M2End");
-        }
+
     }
 }
