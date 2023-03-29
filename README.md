@@ -718,7 +718,7 @@ It is a type of built-in delegate.
 Action<string> writerDelegate = (message) => Console.WriteLine("The message is = " + message);
 writerDelegate("Test Message");
 ```
-`Func` keyword
+## `Func` keyword
 It is a type of built-in delegate. But we can specify output parameters as well.
 ```
 Func<int, int, int> multiplier = (a, b) =>  a * b;
