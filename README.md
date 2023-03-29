@@ -42,6 +42,7 @@
 - [Anonymous Methods](#anonymous-methods)
 - [Lambda Functions](#lambda-functions)
 - [`get` and `set`](#get-and-set)
+- [`Action` keyword](#action-keyword)
   
 ### [OOPS Concepts](#oops-concepts-1)
 - [Access Specifiers](#access-specifiers)
@@ -710,6 +711,12 @@ internal class Student
     }
 }
  ```
+## `Action` keyword
+It is a type of built-in delegate.
+```
+Action<string> writerDelegate = (message) => Console.WriteLine("The message is = " + message);
+writerDelegate("Test Message");
+```
 
 # OOPS Concepts
 ## Access Specifiers
