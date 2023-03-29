@@ -43,6 +43,7 @@
 - [Lambda Functions](#lambda-functions)
 - [`get` and `set`](#get-and-set)
 - [`Action` keyword](#action-keyword)
+- [`Func` keyword](#func-keyword)
   
 ### [OOPS Concepts](#oops-concepts-1)
 - [Access Specifiers](#access-specifiers)
@@ -716,6 +717,12 @@ It is a type of built-in delegate.
 ```
 Action<string> writerDelegate = (message) => Console.WriteLine("The message is = " + message);
 writerDelegate("Test Message");
+```
+`Func` keyword
+It is a type of built-in delegate. But we can specify output parameters as well.
+```
+Func<int, int, int> multiplier = (a, b) =>  a * b;
+Console.WriteLine("Product = " +multiplier(11, 7));
 ```
 
 # OOPS Concepts
