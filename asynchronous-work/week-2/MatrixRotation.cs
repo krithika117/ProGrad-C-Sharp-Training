@@ -9,28 +9,33 @@ class Program
             { 4, 5, 6 },
             { 7, 8, 9 }
         };
-        
+
         int[,] rectangular_matrix = {
             { 1, 2, 3, 4},
             { 5, 6, 7, 8 },
             { 9, 10, 11, 12 }
         };
+
         
-        Console.WriteLine("Original matrix:");
-        PrintMatrix(rectangular_matrix);
 
         Console.WriteLine("Rectangular matrix:");
-        MatrixRotation(rectangular_matrix);
-        
         Console.WriteLine("Original matrix:");
-        PrintMatrix(square_matrix);
+        PrintMatrix(rectangular_matrix);
+        MatrixRotationBy90Degrees(rectangular_matrix);
+        MatrixRotationBy180Degrees(rectangular_matrix);
+        MatrixRotationBy270Degrees(rectangular_matrix);
 
         Console.WriteLine("Square matrix:");
-        MatrixRotation(square_matrix);
+        Console.WriteLine("Original matrix:");
+        PrintMatrix(square_matrix);
+        MatrixRotationBy90Degrees(square_matrix);
+        MatrixRotationBy180Degrees(square_matrix);
+        MatrixRotationBy270Degrees(square_matrix);
     }
-    
-    public static void MatrixRotation(int[,] matrix)
+
+    public static void MatrixRotationBy90Degrees(int[,] matrix)
     {
+        Console.WriteLine("Matrix Rotation By 90 Degrees"); 
         int rows = matrix.GetLength(0);
         int cols = matrix.GetLength(1);
 
@@ -45,8 +50,49 @@ class Program
         }
         PrintMatrix(rotatedMatrix);
     }
-    
-    public static void PrintMatrix(int[,] matrix){
+
+    public static void MatrixRotationBy180Degrees(int[,] matrix)
+    {
+        Console.WriteLine("Matrix Rotation By 180 Degrees");
+
+        int rows = matrix.GetLength(0);
+        int cols = matrix.GetLength(1);
+
+        int[,] rotatedMatrix = new int[rows, cols];
+
+        for (int i = 0; i < rows; i++)
+        {
+            for (int j = 0; j < cols; j++)
+            {
+                rotatedMatrix[rows - i - 1, cols - j - 1] = matrix[i, j];
+
+            }
+        }
+        PrintMatrix(rotatedMatrix);
+    }
+
+    public static void MatrixRotationBy270Degrees(int[,] matrix)
+    {
+
+        Console.WriteLine("Matrix Rotation By 270 Degrees");
+
+        int rows = matrix.GetLength(0);
+        int cols = matrix.GetLength(1);
+
+        int[,] rotatedMatrix = new int[cols, rows];
+
+        for (int i = 0; i < rows; i++)
+        {
+            for (int j = 0; j < cols; j++)
+            {
+                rotatedMatrix[cols - j - 1, i] = matrix[i, j];
+            }
+        }
+        PrintMatrix(rotatedMatrix);
+    }
+
+    public static void PrintMatrix(int[,] matrix)
+    {
         int rows = matrix.GetLength(0);
         int cols = matrix.GetLength(1);
 
@@ -58,11 +104,14 @@ class Program
             }
             Console.WriteLine();
         }
+        Console.WriteLine();
+
     }
 }
 
 /*
 
+90 Degrees:
 Explanation
 00 01 02 03       20 10 00
 10 11 12 13   =>  21 11 01
