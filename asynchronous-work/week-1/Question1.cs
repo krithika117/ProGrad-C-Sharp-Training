@@ -26,14 +26,12 @@ namespace day_4_test
                 Console.WriteLine("Do you tend to hold grudges?");
                 string res4 = Console.ReadLine();
 
-                if (res1.Equals('y') && res4.Equals('y'))
+                if (res1.Equals('y') && res2.Equals('y'))
                     Console.WriteLine("Personality A");
-                else if (res2.Equals('y') && res4.Equals('y'))
+                else if (res1.Equals('y') && res3.Equals('y'))
                     Console.WriteLine("Personality B");
-                else if (res3.Equals('n') || res.Equals('y'))
+                else if (res2.Equals('y') && res3.Equals('y'))
                     Console.WriteLine("Personality C");
-                else if (res2.Equals('n') && res.Equals('y'))
-                    Console.WriteLine("Personality D");
                 else
                     Console.WriteLine("Unique Personality!");
 
