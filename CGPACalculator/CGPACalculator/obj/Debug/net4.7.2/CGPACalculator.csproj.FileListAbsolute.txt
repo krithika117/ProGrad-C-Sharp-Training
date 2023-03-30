@@ -1,0 +1,6 @@
+C:\Users\HP\source\repos\CGPACalculator\CGPACalculator\obj\Debug\net4.7.2\CGPACalculator.csproj.AssemblyReference.cache
+C:\Users\HP\source\repos\CGPACalculator\CGPACalculator\obj\Debug\net4.7.2\CGPACalculator.csproj.SuggestedBindingRedirects.cache
+C:\Users\HP\source\repos\CGPACalculator\CGPACalculator\obj\Debug\net4.7.2\CGPACalculator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\source\repos\CGPACalculator\CGPACalculator\obj\Debug\net4.7.2\CGPACalculator.AssemblyInfoInputs.cache
+C:\Users\HP\source\repos\CGPACalculator\CGPACalculator\obj\Debug\net4.7.2\CGPACalculator.AssemblyInfo.cs
+C:\Users\HP\source\repos\CGPACalculator\CGPACalculator\obj\Debug\net4.7.2\CGPACalculator.csproj.CoreCompileInputs.cache

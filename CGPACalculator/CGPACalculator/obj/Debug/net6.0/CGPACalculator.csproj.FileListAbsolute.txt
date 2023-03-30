@@ -1,0 +1,15 @@
+C:\Users\HP\source\repos\CGPACalculator\CGPACalculator\bin\Debug\net6.0\CGPACalculator.exe
+C:\Users\HP\source\repos\CGPACalculator\CGPACalculator\bin\Debug\net6.0\CGPACalculator.deps.json
+C:\Users\HP\source\repos\CGPACalculator\CGPACalculator\bin\Debug\net6.0\CGPACalculator.runtimeconfig.json
+C:\Users\HP\source\repos\CGPACalculator\CGPACalculator\bin\Debug\net6.0\CGPACalculator.dll
+C:\Users\HP\source\repos\CGPACalculator\CGPACalculator\bin\Debug\net6.0\CGPACalculator.pdb
+C:\Users\HP\source\repos\CGPACalculator\CGPACalculator\obj\Debug\net6.0\CGPACalculator.csproj.AssemblyReference.cache
+C:\Users\HP\source\repos\CGPACalculator\CGPACalculator\obj\Debug\net6.0\CGPACalculator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\source\repos\CGPACalculator\CGPACalculator\obj\Debug\net6.0\CGPACalculator.AssemblyInfoInputs.cache
+C:\Users\HP\source\repos\CGPACalculator\CGPACalculator\obj\Debug\net6.0\CGPACalculator.AssemblyInfo.cs
+C:\Users\HP\source\repos\CGPACalculator\CGPACalculator\obj\Debug\net6.0\CGPACalculator.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\CGPACalculator\CGPACalculator\obj\Debug\net6.0\CGPACalculator.dll
+C:\Users\HP\source\repos\CGPACalculator\CGPACalculator\obj\Debug\net6.0\refint\CGPACalculator.dll
+C:\Users\HP\source\repos\CGPACalculator\CGPACalculator\obj\Debug\net6.0\CGPACalculator.pdb
+C:\Users\HP\source\repos\CGPACalculator\CGPACalculator\obj\Debug\net6.0\CGPACalculator.genruntimeconfig.cache
+C:\Users\HP\source\repos\CGPACalculator\CGPACalculator\obj\Debug\net6.0\ref\CGPACalculator.dll

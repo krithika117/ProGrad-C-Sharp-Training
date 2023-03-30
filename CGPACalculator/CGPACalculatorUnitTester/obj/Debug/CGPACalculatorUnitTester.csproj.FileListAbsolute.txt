@@ -1,0 +1,2 @@
+C:\Users\HP\source\repos\CGPACalculator\CGPACalculatorUnitTester\obj\Debug\CGPACalculatorUnitTester.csproj.AssemblyReference.cache
+C:\Users\HP\source\repos\CGPACalculator\CGPACalculatorUnitTester\obj\Debug\CGPACalculatorUnitTester.csproj.CoreCompileInputs.cache

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "day-8-hands-on/1.0.0": {
+        "runtime": {
+          "day-8-hands-on.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "day-8-hands-on/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
