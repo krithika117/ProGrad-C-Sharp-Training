@@ -21,14 +21,14 @@ namespace day_9_hands_on
             string[] groups = new string[numOfGroups];
 
             // Loop through the plainString 
-            for (int i = 0; i < len; i++)
+            for (int i = len-1, j = 0; i >= 0; i--, j++)
             {
-                int groupIndex = i / n;
+                int groupIndex = j / n;
                 if (groups[groupIndex] == null)
                 {
                     groups[groupIndex] = "";
                 }
-                groups[groupIndex] += plainString[i];
+                groups[groupIndex] = plainString[i] + groups[groupIndex];
             }
             // Join the groups with hyphens and return the final plate number
             return string.Join("-", groups.Reverse());
