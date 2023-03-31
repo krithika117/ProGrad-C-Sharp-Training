@@ -1,0 +1,15 @@
+C:\Users\HP\source\repos\day-9-hands-on\day-9-hands-on\bin\Debug\net6.0\day-9-hands-on.exe
+C:\Users\HP\source\repos\day-9-hands-on\day-9-hands-on\bin\Debug\net6.0\day-9-hands-on.deps.json
+C:\Users\HP\source\repos\day-9-hands-on\day-9-hands-on\bin\Debug\net6.0\day-9-hands-on.runtimeconfig.json
+C:\Users\HP\source\repos\day-9-hands-on\day-9-hands-on\bin\Debug\net6.0\day-9-hands-on.dll
+C:\Users\HP\source\repos\day-9-hands-on\day-9-hands-on\bin\Debug\net6.0\day-9-hands-on.pdb
+C:\Users\HP\source\repos\day-9-hands-on\day-9-hands-on\obj\Debug\net6.0\day-9-hands-on.csproj.AssemblyReference.cache
+C:\Users\HP\source\repos\day-9-hands-on\day-9-hands-on\obj\Debug\net6.0\day-9-hands-on.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\source\repos\day-9-hands-on\day-9-hands-on\obj\Debug\net6.0\day-9-hands-on.AssemblyInfoInputs.cache
+C:\Users\HP\source\repos\day-9-hands-on\day-9-hands-on\obj\Debug\net6.0\day-9-hands-on.AssemblyInfo.cs
+C:\Users\HP\source\repos\day-9-hands-on\day-9-hands-on\obj\Debug\net6.0\day-9-hands-on.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\day-9-hands-on\day-9-hands-on\obj\Debug\net6.0\day-9-hands-on.dll
+C:\Users\HP\source\repos\day-9-hands-on\day-9-hands-on\obj\Debug\net6.0\refint\day-9-hands-on.dll
+C:\Users\HP\source\repos\day-9-hands-on\day-9-hands-on\obj\Debug\net6.0\day-9-hands-on.pdb
+C:\Users\HP\source\repos\day-9-hands-on\day-9-hands-on\obj\Debug\net6.0\day-9-hands-on.genruntimeconfig.cache
+C:\Users\HP\source\repos\day-9-hands-on\day-9-hands-on\obj\Debug\net6.0\ref\day-9-hands-on.dll
