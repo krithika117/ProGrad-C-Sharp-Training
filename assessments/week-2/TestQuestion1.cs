@@ -15,10 +15,10 @@ namespace day_9_hands_on
             int len = plainString.Length;
 
             // Calculate the number of groups in the final plate number
-            int numGroups = len / n + (len % n == 0 ? 0 : 1);
+            int numOfGroups = len / n + (len % n == 0 ? 0 : 1);
 
             // Create an array to hold the groups of characters
-            string[] groups = new string[numGroups];
+            string[] groups = new string[numOfGroups];
 
             // Loop through the plainString 
             for (int i = 0; i < len; i++)
