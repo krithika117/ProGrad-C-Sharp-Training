@@ -1,43 +1,30 @@
 using System;
-using System.Globalization;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace day_8_hands_on
 {
-    class Question2
+    internal class LicenseTimeTaken
     {
-        static void Main(string[] args)
+        public static int TimeTakenForLicense(string myName, int noOfAgents, string otherNames)
         {
-            DateTime dateOfBirth = DateTime.ParseExact(Console.ReadLine()!, "dd/MM/yyyy", CultureInfo.InvariantCulture);
-            NumberPredictor np = new NumberPredictor();
-            int luckyNumber = np.GetLuckynumber(dateOfBirth);
-            Console.WriteLine("\nYour lucky number is " + luckyNumber);
+            // Adding my name to other names
+            otherNames += " " + myName;
+            string[] allNames = otherNames.Split(" ");
+            // Sorting to arrange alphabetically
+            Array.Sort(allNames);
+            // Finding my index to identify my turn
+            int myNameIdx = Array.IndexOf(allNames, myName);
+            // Returning the result
+            return ((myNameIdx / noOfAgents) + 1) * 20;
         }
-    }
-    public class NumberPredictor
-    {
-        public int GetLuckynumber(DateTime dateOfBirth)
+        public static void Main(string[] args)
         {
-            int num = dateOfBirth.Day;
-            int fib1 = 0;
-            int fib2 = 1;
-            int fib3 = 1;
-
-            while (fib3 <= num)
-            {
-                fib3 = fib1 + fib2;
-                fib1 = fib2;
-                fib2 = fib3;
-            }
-
-            Console.Write($"{fib1} ");
-            Console.Write($"{fib2} ");
-
-            return (Math.Abs(num - fib1) < Math.Abs(num - fib2)) ? fib1 : fib2;
-        }
-
-        public int GetUnluckynumber(DateTime dateOfBirth)
-        {
-            return 0;
+            Console.WriteLine(TimeTakenForLicense("Eric", 2, "Adam Caroline Rebecca Frank"));
+            Console.WriteLine(TimeTakenForLicense("Zebediah", 1, "Bob Jim Becky Pat"));
+            Console.WriteLine(TimeTakenForLicense("Aaron", 3, "Jane Max Olivia Sam"));
         }
     }
 }

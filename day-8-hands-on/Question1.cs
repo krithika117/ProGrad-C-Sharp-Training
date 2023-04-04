@@ -1,76 +1,46 @@
-﻿// using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-// namespace day_8_hands_on
-// {
-//     class Question1
-//     {
-//         static void Main(string[] args)
-//         {
-//             NormalCalculator normalCalc = new NormalCalculator();
+namespace day_8_hands_on
+{
+    internal class TestQuestion1
+    {
+        public static string LicensePlate(string s, int n)
+        {
+            // Remove any existing hyphens and convert to uppercase
+            string plainString = s.Replace("-", "").ToUpper();
+            int len = plainString.Length;
 
-//             Console.WriteLine("2 Operands");
-//             Console.WriteLine($"Normal Addition: {normalCalc.Add(10, 5)}");
-//             Console.WriteLine($"Normal Subtraction: {normalCalc.Subtract(10, 5)}");
+            // Calculate the number of groups in the final plate number
+            int numOfGroups = len / n + (len % n == 0 ? 0 : 1);
 
-//             Console.WriteLine("3 Operands");
-//             Console.WriteLine($"Normal Addition: {normalCalc.Add(10, 5, 3)}");
-//             Console.WriteLine($"Normal Subtraction: {normalCalc.Subtract(10, 5, 3)}");
+            // Create an array to hold the groups of characters
+            string[] groups = new string[numOfGroups];
 
-//             OppositeCalculator oppositeCalc = new OppositeCalculator();
+            // Loop through the plainString 
+            for (int i = len - 1, j = 0; i >= 0; i--, j++)
+            {
+                int idx = j / n;
+                if (groups[idx] == null)
+                {
+                    groups[idx] = "";
+                }
+                groups[idx] = plainString[i] + groups[idx];
+            }
+            // Join the groups with hyphens and return the final plate number
+            return string.Join("-", groups.Reverse());
+        }
 
-//             Console.WriteLine("2 Operands");
-//             Console.WriteLine($"Opposite Addition: {oppositeCalc.Add(10, 5)}");
-//             Console.WriteLine($"Opposite Subtraction: {oppositeCalc.Subtract(10, 5)}");
-
-//             Console.WriteLine("3 Operands");
-//             Console.WriteLine($"Opposite Addition: {oppositeCalc.Add(10, 5, 3)}");
-//             Console.WriteLine($"Opposite Subtraction: {oppositeCalc.Subtract(10, 5, 3)}");
-//         }
-//     }
-
-//     class NormalCalculator
-//     {
-//         public virtual int Add(int a, int b)
-//         {
-//             return a + b;
-//         }
-
-//         public virtual int Add(int a, int b, int c)
-//         {
-//             return a + b + c;
-//         }
-
-//         public virtual int Subtract(int a, int b)
-//         {
-//             return a - b;
-//         }
-
-//         public virtual int Subtract(int a, int b, int c)
-//         {
-//             return a - b - c;
-//         }
-//     }
-
-
-//     class OppositeCalculator : NormalCalculator
-//     {
-//         public override int Add(int a, int b)
-//         {
-//             return a - b;
-//         }
-
-//         public override int Add(int a, int b, int c)
-//         {
-//             return a - b - c;
-//         }
-
-//         public override int Subtract(int a, int b)
-//         {
-//             return a + b;
-//         }
-//         public override int Subtract(int a, int b, int c)
-//         {
-//             return a + b + c;
-//         }
-//     }
-// }
+        public static void Main(string[] args)
+        {
+            Console.WriteLine(LicensePlate("5F3Z-2e-9-w", 4));
+            Console.WriteLine(LicensePlate("2-5g-3-J", 2));
+            Console.WriteLine(LicensePlate("2-4A0r7-4k", 3));
+            Console.WriteLine(LicensePlate("nlj-206-fv", 3));
+        }
+    }
+}
+// [9, 10, 11, 12, 13] => 9+2 = 11 = 13-2
